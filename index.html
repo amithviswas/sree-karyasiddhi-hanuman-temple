@@ -160,17 +160,17 @@
     /* ===== HIGHLIGHTED DONATE BUTTON ===== */
     .donate-btn {
       background: linear-gradient(135deg, var(--sindoor), #B84000);
-      border: 1.5px solid rgba(255,150,80,0.5);
+      border: 2px solid rgba(255,150,80,0.6);
       color: #fff;
       font-family: 'Cinzel', serif;
-      font-size: .72rem;
+      font-size: .92rem;
       font-weight: 700;
-      padding: .42rem .9rem;
-      border-radius: 20px;
+      padding: .6rem 1.3rem;
+      border-radius: 24px;
       cursor: pointer;
       text-decoration: none;
       white-space: nowrap;
-      letter-spacing: .04em;
+      letter-spacing: .05em;
       position: relative;
       box-shadow: 0 0 0 0 rgba(255,119,51,0.6);
       animation: donatePulse 2s infinite;
@@ -178,13 +178,13 @@
     }
     .donate-btn:hover {
       background: linear-gradient(135deg, var(--sindoor-glow), var(--sindoor));
-      transform: translateY(-2px) scale(1.04);
+      transform: translateY(-2px) scale(1.05);
       animation: none;
-      box-shadow: 0 6px 24px rgba(217,79,0,0.55);
+      box-shadow: 0 8px 28px rgba(217,79,0,0.6);
     }
     @keyframes donatePulse {
-      0%   { box-shadow: 0 0 0 0 rgba(255,119,51,0.65); }
-      60%  { box-shadow: 0 0 0 8px rgba(255,119,51,0); }
+      0%   { box-shadow: 0 0 0 0 rgba(255,119,51,0.7); }
+      60%  { box-shadow: 0 0 0 10px rgba(255,119,51,0); }
       100% { box-shadow: 0 0 0 0 rgba(255,119,51,0); }
     }
 
@@ -770,19 +770,8 @@ function chooseLang(lang) {
     document.querySelectorAll('.scroll-indicator-text.te').forEach(el => el.style.display = 'block');
     document.querySelectorAll('.scroll-indicator-text.en').forEach(el => el.style.display = 'none');
   }
-  try { localStorage.setItem('sklang', lang); } catch(e) {}
+  // Note: we do NOT save to localStorage here — popup shows every time on load/refresh
 }
-
-// Check saved preference
-(function() {
-  try {
-    const saved = localStorage.getItem('sklang');
-    if (saved) {
-      document.getElementById('langPopup').classList.add('hidden');
-      if (saved === 'te') document.body.classList.add('lang-te');
-    }
-  } catch(e) {}
-})();
 
 // ===== LANGUAGE TOGGLE (nav button) =====
 function toggleLang() {
