@@ -1,34 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sree Karyasiddhi Hanuman Temple – Radhayapalem</title>
-  <meta name="description" content="Sree Karyasiddhi Hanuman Temple under construction in Radhayapalem, Rajanagaram, East Godavari. Support this community-built temple dedicated to Lord Hanuman." />
+  <meta name="description"
+    content="Sree Karyasiddhi Hanuman Temple under construction in Radhayapalem, Rajanagaram, East Godavari. Support this community-built temple dedicated to Lord Hanuman." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Noto+Sans+Telugu:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Noto+Sans+Telugu:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+    rel="stylesheet" />
   <style>
     :root {
-      --sindoor:#D94F00; --sindoor-light:#F06522; --sindoor-glow:#FF7733;
-      --gold:#F5A623; --gold-deep:#C87D00; --gold-pale:#FFE4A0;
-      --cream:#FDF0DC; --cream-dim:#E8D5B0;
-      --dark-base:#0D0600; --dark-card:#1A0B00; --dark-panel:#120800; --dark-border:#3A1F00;
-      --text-main:#F2E0C0; --text-soft:#C8A870; --text-muted:#8A6A40;
-      --shadow-warm:rgba(217,79,0,0.35); --shadow-gold:rgba(245,166,35,0.25);
-      --r-sm:8px; --r-md:16px; --r-lg:24px;
+      --sindoor: #D94F00;
+      --sindoor-light: #F06522;
+      --sindoor-glow: #FF7733;
+      --gold: #F5A623;
+      --gold-deep: #C87D00;
+      --gold-pale: #FFE4A0;
+      --cream: #FDF0DC;
+      --cream-dim: #E8D5B0;
+      --dark-base: #0D0600;
+      --dark-card: #1A0B00;
+      --dark-panel: #120800;
+      --dark-border: #3A1F00;
+      --text-main: #F2E0C0;
+      --text-soft: #C8A870;
+      --text-muted: #8A6A40;
+      --shadow-warm: rgba(217, 79, 0, 0.35);
+      --shadow-gold: rgba(245, 166, 35, 0.25);
+      --r-sm: 8px;
+      --r-md: 16px;
+      --r-lg: 24px;
     }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:'Crimson Pro','Noto Sans Telugu',Georgia,serif;background:var(--dark-base);color:var(--text-main);line-height:1.7;overflow-x:hidden}
-    img{max-width:100%;display:block}
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Crimson Pro', 'Noto Sans Telugu', Georgia, serif;
+      background: var(--dark-base);
+      color: var(--text-main);
+      line-height: 1.7;
+      overflow-x: hidden
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
 
     /* ===== LANGUAGE POPUP ===== */
     .lang-popup-overlay {
       position: fixed;
       inset: 0;
       z-index: 9000;
-      background: rgba(8,3,0,0.92);
+      background: rgba(8, 3, 0, 0.92);
       backdrop-filter: blur(10px);
       display: flex;
       align-items: center;
@@ -36,30 +74,50 @@
       padding: 1.5rem;
       animation: popupFadeIn 0.5s ease both;
     }
-    .lang-popup-overlay.hidden { display: none; }
-    @keyframes popupFadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
+
+    .lang-popup-overlay.hidden {
+      display: none;
     }
+
+    @keyframes popupFadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
     .lang-popup-box {
       background: linear-gradient(160deg, #1E0E00, #120800);
-      border: 1px solid rgba(217,79,0,0.4);
+      border: 1px solid rgba(217, 79, 0, 0.4);
       border-radius: 24px;
       padding: 2.5rem 2rem;
       text-align: center;
       max-width: 380px;
       width: 100%;
-      box-shadow: 0 0 60px rgba(217,79,0,0.25), 0 0 120px rgba(217,79,0,0.1);
+      box-shadow: 0 0 60px rgba(217, 79, 0, 0.25), 0 0 120px rgba(217, 79, 0, 0.1);
       animation: popupSlideUp 0.5s 0.1s ease both;
     }
+
     @keyframes popupSlideUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     .lang-popup-om {
       font-size: 2.4rem;
       margin-bottom: 0.5rem;
     }
+
     .lang-popup-title {
       font-family: 'Cinzel', serif;
       font-size: 1.05rem;
@@ -68,18 +126,21 @@
       letter-spacing: 0.06em;
       margin-bottom: 0.3rem;
     }
+
     .lang-popup-temple {
       font-family: 'Noto Sans Telugu', sans-serif;
       font-size: 0.9rem;
       color: var(--gold);
       margin-bottom: 0.25rem;
     }
+
     .lang-popup-sub {
       font-size: 0.82rem;
       color: var(--text-muted);
       font-style: italic;
       margin-bottom: 2rem;
     }
+
     .lang-popup-ask {
       font-family: 'Cinzel', serif;
       font-size: 0.78rem;
@@ -88,11 +149,13 @@
       color: var(--text-soft);
       margin-bottom: 1.2rem;
     }
+
     .lang-popup-btns {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0.85rem;
     }
+
     .lang-popup-btn {
       border: none;
       border-radius: 14px;
@@ -101,32 +164,37 @@
       transition: all 0.25s ease;
       font-weight: 600;
     }
+
     .lang-popup-btn.english {
       background: linear-gradient(135deg, var(--sindoor), #8A2D00);
       color: #fff;
       font-family: 'Cinzel', serif;
       font-size: 1rem;
-      box-shadow: 0 4px 18px rgba(217,79,0,0.4);
+      box-shadow: 0 4px 18px rgba(217, 79, 0, 0.4);
     }
+
     .lang-popup-btn.english:hover {
       background: linear-gradient(135deg, var(--sindoor-glow), var(--sindoor));
       transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(217,79,0,0.55);
+      box-shadow: 0 8px 28px rgba(217, 79, 0, 0.55);
     }
+
     .lang-popup-btn.telugu {
       background: linear-gradient(135deg, #2A1500, #1A0B00);
-      border: 1.5px solid rgba(245,166,35,0.4);
+      border: 1.5px solid rgba(245, 166, 35, 0.4);
       color: var(--gold);
       font-family: 'Noto Sans Telugu', sans-serif;
       font-size: 1.1rem;
-      box-shadow: 0 4px 18px rgba(245,166,35,0.15);
+      box-shadow: 0 4px 18px rgba(245, 166, 35, 0.15);
     }
+
     .lang-popup-btn.telugu:hover {
       background: linear-gradient(135deg, #3A1E00, #2A1200);
-      border-color: rgba(245,166,35,0.7);
+      border-color: rgba(245, 166, 35, 0.7);
       transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(245,166,35,0.3);
+      box-shadow: 0 8px 28px rgba(245, 166, 35, 0.3);
     }
+
     .lang-popup-btn-label {
       display: block;
       font-size: 0.65rem;
@@ -136,6 +204,7 @@
       font-style: italic;
       font-weight: 400;
     }
+
     .lang-popup-divider {
       font-size: 1rem;
       color: var(--text-muted);
@@ -143,24 +212,111 @@
     }
 
     /* ===== LANGUAGE CLASS TOGGLE ===== */
-    .en{display:block} .te{display:none}
-    body.lang-te .en{display:none!important} body.lang-te .te{display:block!important}
-    span.en{display:inline} span.te{display:none}
-    body.lang-te span.en{display:none!important} body.lang-te span.te{display:inline!important}
+    .en {
+      display: block
+    }
+
+    .te {
+      display: none
+    }
+
+    body.lang-te .en {
+      display: none !important
+    }
+
+    body.lang-te .te {
+      display: block !important
+    }
+
+    span.en {
+      display: inline
+    }
+
+    span.te {
+      display: none
+    }
+
+    body.lang-te span.en {
+      display: none !important
+    }
+
+    body.lang-te span.te {
+      display: inline !important
+    }
 
     /* ===== NAV ===== */
-    nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem;background:rgba(13,6,0,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--dark-border);gap:.5rem}
-    .nav-brand{display:flex;flex-direction:column;flex:1;min-width:0;line-height:1.3}
-    .nav-brand .b1{font-family:'Cinzel',serif;font-size:clamp(.58rem,2.4vw,.78rem);font-weight:700;color:var(--sindoor-glow);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.03em}
-    .nav-brand .b2{font-family:'Noto Sans Telugu',sans-serif;font-size:clamp(.5rem,1.9vw,.66rem);color:var(--gold);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .nav-actions{display:flex;align-items:center;gap:.5rem;flex-shrink:0}
-    .lang-btn{background:rgba(255,119,51,.12);border:1px solid var(--sindoor);color:var(--sindoor-glow);font-family:'Noto Sans Telugu','Cinzel',sans-serif;font-size:.74rem;padding:.32rem .68rem;border-radius:20px;cursor:pointer;transition:all .25s}
-    .lang-btn:hover{background:rgba(255,119,51,.25);color:var(--gold)}
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .7rem 1rem;
+      background: rgba(13, 6, 0, .9);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--dark-border);
+      gap: .5rem
+    }
+
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 0;
+      line-height: 1.3
+    }
+
+    .nav-brand .b1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(.58rem, 2.4vw, .78rem);
+      font-weight: 700;
+      color: var(--sindoor-glow);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      letter-spacing: .03em
+    }
+
+    .nav-brand .b2 {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: clamp(.5rem, 1.9vw, .66rem);
+      color: var(--gold);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      flex-shrink: 0
+    }
+
+    .lang-btn {
+      background: rgba(255, 119, 51, .12);
+      border: 1px solid var(--sindoor);
+      color: var(--sindoor-glow);
+      font-family: 'Noto Sans Telugu', 'Cinzel', sans-serif;
+      font-size: .74rem;
+      padding: .32rem .68rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all .25s
+    }
+
+    .lang-btn:hover {
+      background: rgba(255, 119, 51, .25);
+      color: var(--gold)
+    }
 
     /* ===== HIGHLIGHTED DONATE BUTTON ===== */
     .donate-btn {
       background: linear-gradient(135deg, var(--sindoor), #B84000);
-      border: 2px solid rgba(255,150,80,0.6);
+      border: 2px solid rgba(255, 150, 80, 0.6);
       color: #fff;
       font-family: 'Cinzel', serif;
       font-size: .92rem;
@@ -172,33 +328,130 @@
       white-space: nowrap;
       letter-spacing: .05em;
       position: relative;
-      box-shadow: 0 0 0 0 rgba(255,119,51,0.6);
+      box-shadow: 0 0 0 0 rgba(255, 119, 51, 0.6);
       animation: donatePulse 2s infinite;
       transition: transform 0.2s, background 0.2s;
     }
+
     .donate-btn:hover {
       background: linear-gradient(135deg, var(--sindoor-glow), var(--sindoor));
       transform: translateY(-2px) scale(1.05);
       animation: none;
-      box-shadow: 0 8px 28px rgba(217,79,0,0.6);
+      box-shadow: 0 8px 28px rgba(217, 79, 0, 0.6);
     }
+
     @keyframes donatePulse {
-      0%   { box-shadow: 0 0 0 0 rgba(255,119,51,0.7); }
-      60%  { box-shadow: 0 0 0 10px rgba(255,119,51,0); }
-      100% { box-shadow: 0 0 0 0 rgba(255,119,51,0); }
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 119, 51, 0.7);
+      }
+
+      60% {
+        box-shadow: 0 0 0 10px rgba(255, 119, 51, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 119, 51, 0);
+      }
     }
 
     /* ===== HERO ===== */
-    #hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;z-index:0}
-    .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(.52) saturate(.88)}
-    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,6,0,.08) 0%,rgba(13,6,0,.08) 32%,rgba(13,6,0,.68) 70%,rgba(13,6,0,.97) 100%)}
-    .hero-content{position:relative;z-index:2;text-align:center;padding:2rem 1.25rem 5rem;width:100%;max-width:620px}
-    .hero-flag{font-size:.82rem;color:var(--gold);letter-spacing:.15em;margin-bottom:.7rem;font-family:'Cinzel',serif;opacity:.85;animation:fadeUp 1s ease both}
-    .hero-title{font-family:'Cinzel',serif;font-size:clamp(1.7rem,6.5vw,3rem);font-weight:900;line-height:1.1;background:linear-gradient(135deg,#FFD580,var(--sindoor-glow),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.45rem;animation:fadeUp 1s .15s ease both}
-    .hero-title-te{font-family:'Noto Sans Telugu',sans-serif;font-size:clamp(1.25rem,4.8vw,2.1rem);font-weight:700;background:linear-gradient(135deg,#FFD580,var(--sindoor-glow),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.45rem;animation:fadeUp 1s .18s ease both}
-    .hero-sub{font-size:clamp(.92rem,2.8vw,1.1rem);color:var(--cream-dim);font-style:italic;margin-bottom:1.4rem;animation:fadeUp 1s .32s ease both}
-    .hero-mantra{display:inline-block;font-family:'Crimson Pro',serif;font-style:italic;font-size:clamp(.8rem,2.5vw,.98rem);color:var(--gold);padding:.7rem 1.2rem;border:1px solid rgba(245,166,35,.3);border-radius:var(--r-lg);background:rgba(245,166,35,.07);backdrop-filter:blur(4px);animation:fadeUp 1s .48s ease both;line-height:1.7}
+    #hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      overflow: hidden
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: brightness(.52) saturate(.88)
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(13, 6, 0, .08) 0%, rgba(13, 6, 0, .08) 32%, rgba(13, 6, 0, .68) 70%, rgba(13, 6, 0, .97) 100%)
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 2rem 1.25rem 5rem;
+      width: 100%;
+      max-width: 620px
+    }
+
+    .hero-flag {
+      font-size: .82rem;
+      color: var(--gold);
+      letter-spacing: .15em;
+      margin-bottom: .7rem;
+      font-family: 'Cinzel', serif;
+      opacity: .85;
+      animation: fadeUp 1s ease both
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.7rem, 6.5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+      background: linear-gradient(135deg, #FFD580, var(--sindoor-glow), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: .45rem;
+      animation: fadeUp 1s .15s ease both
+    }
+
+    .hero-title-te {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: clamp(1.25rem, 4.8vw, 2.1rem);
+      font-weight: 700;
+      background: linear-gradient(135deg, #FFD580, var(--sindoor-glow), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: .45rem;
+      animation: fadeUp 1s .18s ease both
+    }
+
+    .hero-sub {
+      font-size: clamp(.92rem, 2.8vw, 1.1rem);
+      color: var(--cream-dim);
+      font-style: italic;
+      margin-bottom: 1.4rem;
+      animation: fadeUp 1s .32s ease both
+    }
+
+    .hero-mantra {
+      display: inline-block;
+      font-family: 'Crimson Pro', serif;
+      font-style: italic;
+      font-size: clamp(.8rem, 2.5vw, .98rem);
+      color: var(--gold);
+      padding: .7rem 1.2rem;
+      border: 1px solid rgba(245, 166, 35, .3);
+      border-radius: var(--r-lg);
+      background: rgba(245, 166, 35, .07);
+      backdrop-filter: blur(4px);
+      animation: fadeUp 1s .48s ease both;
+      line-height: 1.7
+    }
 
     /* ===== SCROLL INDICATOR (big, visible, persistent) ===== */
     .scroll-indicator {
@@ -214,19 +467,22 @@
       cursor: pointer;
       animation: scrollBounce 1.6s ease-in-out infinite;
     }
+
     .scroll-indicator-text {
       font-family: 'Cinzel', serif;
       font-size: 0.6rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: rgba(245,166,35,0.75);
+      color: rgba(245, 166, 35, 0.75);
     }
+
     .scroll-indicator-arrows {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 3px;
     }
+
     .scroll-indicator-arrows span {
       display: block;
       width: 22px;
@@ -237,599 +493,1414 @@
       opacity: 0;
       animation: arrowFade 1.6s ease-in-out infinite;
     }
-    .scroll-indicator-arrows span:nth-child(1) { animation-delay: 0s; }
-    .scroll-indicator-arrows span:nth-child(2) { animation-delay: 0.2s; }
-    .scroll-indicator-arrows span:nth-child(3) { animation-delay: 0.4s; }
-    @keyframes arrowFade {
-      0%   { opacity: 0; transform: rotate(45deg) translateY(-6px); }
-      50%  { opacity: 1; }
-      100% { opacity: 0; transform: rotate(45deg) translateY(6px); }
-    }
-    @keyframes scrollBounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50%       { transform: translateX(-50%) translateY(5px); }
+
+    .scroll-indicator-arrows span:nth-child(1) {
+      animation-delay: 0s;
     }
 
-    @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes pulseGold{0%,100%{box-shadow:0 0 12px var(--shadow-gold)}50%{box-shadow:0 0 28px rgba(245,166,35,.55)}}
+    .scroll-indicator-arrows span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .scroll-indicator-arrows span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes arrowFade {
+      0% {
+        opacity: 0;
+        transform: rotate(45deg) translateY(-6px);
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        transform: rotate(45deg) translateY(6px);
+      }
+    }
+
+    @keyframes scrollBounce {
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(5px);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes pulseGold {
+
+      0%,
+      100% {
+        box-shadow: 0 0 12px var(--shadow-gold)
+      }
+
+      50% {
+        box-shadow: 0 0 28px rgba(245, 166, 35, .55)
+      }
+    }
 
     /* ===== SECTION BASE ===== */
-    .anch{display:block;visibility:hidden;height:68px;margin-top:-68px}
-    section{padding:3.8rem 1.2rem;max-width:720px;margin:0 auto}
-    .slbl{font-family:'Cinzel',serif;font-size:.67rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--sindoor);margin-bottom:.35rem}
-    .stitle{font-family:'Cinzel',serif;font-size:clamp(1.35rem,5vw,1.95rem);font-weight:700;color:var(--gold);line-height:1.2;margin-bottom:1.4rem}
-    .stitle-te{font-family:'Noto Sans Telugu',sans-serif;font-size:clamp(1.15rem,4.3vw,1.75rem);color:var(--gold);font-weight:700;margin-bottom:1.4rem}
-    .btext{font-size:clamp(.98rem,2.9vw,1.08rem);color:var(--text-main);line-height:1.85}
-    .btext p+p{margin-top:.95em}
-    .te-f{font-family:'Noto Sans Telugu',sans-serif;font-size:clamp(.9rem,2.7vw,1.03rem);line-height:1.95}
-    .blockquote{margin:1.65rem 0;padding:1.05rem 1.35rem;border-left:3px solid var(--sindoor);background:rgba(217,79,0,.07);border-radius:0 var(--r-sm) var(--r-sm) 0;font-style:italic;font-size:1.04rem;color:var(--gold-pale);line-height:1.75}
+    .anch {
+      display: block;
+      visibility: hidden;
+      height: 68px;
+      margin-top: -68px
+    }
+
+    section {
+      padding: 3.8rem 1.2rem;
+      max-width: 720px;
+      margin: 0 auto
+    }
+
+    .slbl {
+      font-family: 'Cinzel', serif;
+      font-size: .67rem;
+      font-weight: 600;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--sindoor);
+      margin-bottom: .35rem
+    }
+
+    .stitle {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.35rem, 5vw, 1.95rem);
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1.2;
+      margin-bottom: 1.4rem
+    }
+
+    .stitle-te {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: clamp(1.15rem, 4.3vw, 1.75rem);
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 1.4rem
+    }
+
+    .btext {
+      font-size: clamp(.98rem, 2.9vw, 1.08rem);
+      color: var(--text-main);
+      line-height: 1.85
+    }
+
+    .btext p+p {
+      margin-top: .95em
+    }
+
+    .te-f {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: clamp(.9rem, 2.7vw, 1.03rem);
+      line-height: 1.95
+    }
+
+    .blockquote {
+      margin: 1.65rem 0;
+      padding: 1.05rem 1.35rem;
+      border-left: 3px solid var(--sindoor);
+      background: rgba(217, 79, 0, .07);
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+      font-style: italic;
+      font-size: 1.04rem;
+      color: var(--gold-pale);
+      line-height: 1.75
+    }
 
     /* About image band */
-    .imgband{width:100%;overflow:hidden}
-    .imgband img{width:100%;height:295px;object-fit:cover;object-position:center;filter:brightness(.72) saturate(.88)}
+    .imgband {
+      width: 100%;
+      overflow: hidden
+    }
+
+    .imgband img {
+      width: 100%;
+      height: 295px;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(.72) saturate(.88)
+    }
 
     /* Hanuman attrs */
-    .attrs{display:grid;grid-template-columns:repeat(2,1fr);gap:.65rem;margin:1.8rem 0}
-    .attr{background:rgba(255,119,51,.07);border:1px solid rgba(255,119,51,.18);border-radius:var(--r-md);padding:.95rem .8rem;text-align:center;transition:border-color .25s,background .25s}
-    .attr:hover{background:rgba(255,119,51,.13);border-color:rgba(255,119,51,.4)}
-    .aico{font-size:1.55rem;margin-bottom:.28rem}
-    .aname{font-family:'Cinzel',serif;font-size:.78rem;font-weight:600;color:var(--sindoor-glow);margin-bottom:.13rem}
-    .aname-te{font-family:'Noto Sans Telugu',sans-serif;font-size:.76rem;color:var(--sindoor-glow);margin-bottom:.13rem}
-    .adesc{font-size:.76rem;color:var(--text-soft);line-height:1.5}
-    .adesc-te{font-family:'Noto Sans Telugu',sans-serif;font-size:.73rem;color:var(--text-soft);line-height:1.55}
+    .attrs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .65rem;
+      margin: 1.8rem 0
+    }
+
+    .attr {
+      background: rgba(255, 119, 51, .07);
+      border: 1px solid rgba(255, 119, 51, .18);
+      border-radius: var(--r-md);
+      padding: .95rem .8rem;
+      text-align: center;
+      transition: border-color .25s, background .25s
+    }
+
+    .attr:hover {
+      background: rgba(255, 119, 51, .13);
+      border-color: rgba(255, 119, 51, .4)
+    }
+
+    .aico {
+      font-size: 1.55rem;
+      margin-bottom: .28rem
+    }
+
+    .aname {
+      font-family: 'Cinzel', serif;
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--sindoor-glow);
+      margin-bottom: .13rem
+    }
+
+    .aname-te {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: .76rem;
+      color: var(--sindoor-glow);
+      margin-bottom: .13rem
+    }
+
+    .adesc {
+      font-size: .76rem;
+      color: var(--text-soft);
+      line-height: 1.5
+    }
+
+    .adesc-te {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: .73rem;
+      color: var(--text-soft);
+      line-height: 1.55
+    }
 
     /* Founder */
-    .founder-card{background:linear-gradient(135deg,rgba(26,11,0,.92),rgba(30,18,0,.92));border:1px solid var(--dark-border);border-radius:var(--r-lg);overflow:hidden;margin-top:1.85rem}
-    .founder-photos{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-    .founder-photos img{width:100%;height:205px;object-fit:cover;object-position:center top}
-    .founder-info{padding:1.4rem 1.2rem}
-    .fname{font-family:'Cinzel',serif;font-size:1.22rem;font-weight:700;color:var(--gold);margin-bottom:.08rem}
-    .fname-te{font-family:'Noto Sans Telugu',sans-serif;font-size:1.05rem;color:var(--gold);margin-bottom:.08rem}
-    .frole{font-size:.78rem;color:var(--sindoor-glow);font-family:'Cinzel',serif;letter-spacing:.09em;margin-bottom:.9rem;text-transform:uppercase}
-    .frole-te{font-family:'Noto Sans Telugu',sans-serif;font-size:.76rem;color:var(--sindoor-glow);margin-bottom:.9rem}
-    .fquote{font-style:italic;font-size:.98rem;color:var(--cream-dim);padding:.85rem .95rem;background:rgba(255,119,51,.06);border-left:3px solid var(--sindoor);border-radius:0 var(--r-sm) var(--r-sm) 0;line-height:1.7}
-    .fquote-te{font-family:'Noto Sans Telugu',sans-serif;font-size:.9rem;font-style:italic;color:var(--cream-dim);padding:.85rem .95rem;background:rgba(255,119,51,.06);border-left:3px solid var(--sindoor);border-radius:0 var(--r-sm) var(--r-sm) 0;line-height:1.75}
-    .fcontact{margin-top:.75rem;font-size:.8rem;color:var(--text-muted)}
-    .fcontact a{color:var(--sindoor-glow);text-decoration:none}
+    .founder-card {
+      background: linear-gradient(135deg, rgba(26, 11, 0, .92), rgba(30, 18, 0, .92));
+      border: 1px solid var(--dark-border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      margin-top: 1.85rem
+    }
+
+    .founder-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px
+    }
+
+    .founder-photos img {
+      width: 100%;
+      height: 205px;
+      object-fit: cover;
+      object-position: center top
+    }
+
+    .founder-info {
+      padding: 1.4rem 1.2rem
+    }
+
+    .fname {
+      font-family: 'Cinzel', serif;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: .08rem
+    }
+
+    .fname-te {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: 1.05rem;
+      color: var(--gold);
+      margin-bottom: .08rem
+    }
+
+    .frole {
+      font-size: .78rem;
+      color: var(--sindoor-glow);
+      font-family: 'Cinzel', serif;
+      letter-spacing: .09em;
+      margin-bottom: .9rem;
+      text-transform: uppercase
+    }
+
+    .frole-te {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: .76rem;
+      color: var(--sindoor-glow);
+      margin-bottom: .9rem
+    }
+
+    .fquote {
+      font-style: italic;
+      font-size: .98rem;
+      color: var(--cream-dim);
+      padding: .85rem .95rem;
+      background: rgba(255, 119, 51, .06);
+      border-left: 3px solid var(--sindoor);
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+      line-height: 1.7
+    }
+
+    .fquote-te {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: .9rem;
+      font-style: italic;
+      color: var(--cream-dim);
+      padding: .85rem .95rem;
+      background: rgba(255, 119, 51, .06);
+      border-left: 3px solid var(--sindoor);
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+      line-height: 1.75
+    }
+
+    .fcontact {
+      margin-top: .75rem;
+      font-size: .8rem;
+      color: var(--text-muted)
+    }
+
+    .fcontact a {
+      color: var(--sindoor-glow);
+      text-decoration: none
+    }
 
     /* Timeline */
-    .timeline{position:relative;margin-top:2.4rem}
-    .timeline::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--sindoor),var(--gold),rgba(245,166,35,.08))}
-    .tl-item{display:flex;gap:1.2rem;margin-bottom:2.35rem;position:relative}
-    .tl-dot{flex-shrink:0;width:41px;height:41px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.05rem;position:relative;z-index:1}
-    .tl-dot.done{background:linear-gradient(135deg,var(--sindoor),#8A2D00);box-shadow:0 0 12px var(--shadow-warm)}
-    .tl-dot.active{background:linear-gradient(135deg,var(--gold),var(--gold-deep));box-shadow:0 0 18px var(--shadow-gold);animation:pulseGold 2s infinite}
-    .tl-dot.upcoming{background:rgba(26,11,0,.8);border:2px dashed var(--dark-border)}
-    .tl-body{flex:1}
-    .tl-date{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.11em;color:var(--sindoor-glow);text-transform:uppercase;margin-bottom:.18rem}
-    .tl-ttl{font-family:'Cinzel',serif;font-size:.97rem;font-weight:600;color:var(--gold);margin-bottom:.28rem}
-    .tl-ttl-te{font-family:'Noto Sans Telugu',sans-serif;font-size:.88rem;color:var(--gold);margin-bottom:.28rem}
-    .tl-desc{font-size:.88rem;color:var(--text-soft);line-height:1.65}
-    .tl-desc-te{font-family:'Noto Sans Telugu',sans-serif;font-size:.83rem;color:var(--text-soft);line-height:1.7}
-    .tl-photo{margin-top:.8rem;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--dark-border);cursor:pointer}
-    .tl-photo img{width:100%;height:190px;object-fit:cover;transition:transform .4s}
-    .tl-photo:hover img{transform:scale(1.03)}
-    .tl-cap{background:rgba(26,11,0,.8);padding:.42rem .68rem;font-size:.7rem;color:var(--text-muted);font-style:italic}
-    .tl-cap-te{font-family:'Noto Sans Telugu',sans-serif;background:rgba(26,11,0,.8);padding:.42rem .68rem;font-size:.68rem;color:var(--text-muted);font-style:italic}
+    .timeline {
+      position: relative;
+      margin-top: 2.4rem
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--sindoor), var(--gold), rgba(245, 166, 35, .08))
+    }
+
+    .tl-item {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 2.35rem;
+      position: relative
+    }
+
+    .tl-dot {
+      flex-shrink: 0;
+      width: 41px;
+      height: 41px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+      position: relative;
+      z-index: 1
+    }
+
+    .tl-dot.done {
+      background: linear-gradient(135deg, var(--sindoor), #8A2D00);
+      box-shadow: 0 0 12px var(--shadow-warm)
+    }
+
+    .tl-dot.active {
+      background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+      box-shadow: 0 0 18px var(--shadow-gold);
+      animation: pulseGold 2s infinite
+    }
+
+    .tl-dot.upcoming {
+      background: rgba(26, 11, 0, .8);
+      border: 2px dashed var(--dark-border)
+    }
+
+    .tl-body {
+      flex: 1
+    }
+
+    .tl-date {
+      font-family: 'Cinzel', serif;
+      font-size: .68rem;
+      letter-spacing: .11em;
+      color: var(--sindoor-glow);
+      text-transform: uppercase;
+      margin-bottom: .18rem
+    }
+
+    .tl-ttl {
+      font-family: 'Cinzel', serif;
+      font-size: .97rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: .28rem
+    }
+
+    .tl-ttl-te {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: .88rem;
+      color: var(--gold);
+      margin-bottom: .28rem
+    }
+
+    .tl-desc {
+      font-size: .88rem;
+      color: var(--text-soft);
+      line-height: 1.65
+    }
+
+    .tl-desc-te {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: .83rem;
+      color: var(--text-soft);
+      line-height: 1.7
+    }
+
+    .tl-photo {
+      margin-top: .8rem;
+      border-radius: var(--r-md);
+      overflow: hidden;
+      border: 1px solid var(--dark-border);
+      cursor: pointer
+    }
+
+    .tl-photo img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      transition: transform .4s
+    }
+
+    .tl-photo:hover img {
+      transform: scale(1.03)
+    }
+
+    .tl-cap {
+      background: rgba(26, 11, 0, .8);
+      padding: .42rem .68rem;
+      font-size: .7rem;
+      color: var(--text-muted);
+      font-style: italic
+    }
+
+    .tl-cap-te {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      background: rgba(26, 11, 0, .8);
+      padding: .42rem .68rem;
+      font-size: .68rem;
+      color: var(--text-muted);
+      font-style: italic
+    }
 
     /* Gallery */
-    .gal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.58rem;margin-top:1.8rem}
-    .gal-item{position:relative;border-radius:var(--r-md);overflow:hidden;cursor:pointer;border:1px solid var(--dark-border);background:var(--dark-card)}
-    .gal-item.wide{grid-column:span 2}
-    .gal-item img{width:100%;height:190px;object-fit:cover;display:block;transition:transform .4s,filter .4s}
-    .gal-item.wide img{height:250px}
-    .gal-item:hover img{transform:scale(1.04);filter:brightness(.82)}
-    .gal-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(13,6,0,.95) 0%,transparent 100%);padding:1.4rem .72rem .55rem;font-size:.7rem;color:var(--cream-dim);font-style:italic}
+    .gal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .58rem;
+      margin-top: 1.8rem
+    }
+
+    .gal-item {
+      position: relative;
+      border-radius: var(--r-md);
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid var(--dark-border);
+      background: var(--dark-card)
+    }
+
+    .gal-item.wide {
+      grid-column: span 2
+    }
+
+    .gal-item img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+      transition: transform .4s, filter .4s
+    }
+
+    .gal-item.wide img {
+      height: 250px
+    }
+
+    .gal-item:hover img {
+      transform: scale(1.04);
+      filter: brightness(.82)
+    }
+
+    .gal-cap {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(13, 6, 0, .95) 0%, transparent 100%);
+      padding: 1.4rem .72rem .55rem;
+      font-size: .7rem;
+      color: var(--cream-dim);
+      font-style: italic
+    }
 
     /* Lightbox */
-    .lb{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.94);align-items:center;justify-content:center;flex-direction:column}
-    .lb.open{display:flex}
-    .lb img{max-width:96vw;max-height:80vh;object-fit:contain;border-radius:var(--r-md)}
-    .lb-x{position:absolute;top:1rem;right:1rem;font-size:2rem;color:var(--text-soft);cursor:pointer;background:none;border:none;line-height:1}
-    .lb-cap{margin-top:.9rem;font-style:italic;font-size:.8rem;color:var(--text-muted);text-align:center;padding:0 1rem}
+    .lb {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(0, 0, 0, .94);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column
+    }
+
+    .lb.open {
+      display: flex
+    }
+
+    .lb img {
+      max-width: 96vw;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: var(--r-md)
+    }
+
+    .lb-x {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      color: var(--text-soft);
+      cursor: pointer;
+      background: none;
+      border: none;
+      line-height: 1
+    }
+
+    .lb-cap {
+      margin-top: .9rem;
+      font-style: italic;
+      font-size: .8rem;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 0 1rem
+    }
 
     /* Separator */
-    .sep{width:100%;height:1px;background:linear-gradient(to right,transparent,var(--dark-border),transparent)}
+    .sep {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--dark-border), transparent)
+    }
 
     /* Support */
-    .bank-card{background:linear-gradient(135deg,rgba(26,11,0,.95),rgba(30,18,0,.95));border:1px solid rgba(217,79,0,.25);border-radius:var(--r-lg);padding:1.35rem 1.15rem;margin-bottom:1rem}
-    .bank-head{display:flex;align-items:center;gap:.7rem;margin-bottom:1.15rem;padding-bottom:.75rem;border-bottom:1px solid rgba(217,79,0,.15)}
-    .bank-ico{font-size:1.45rem}
-    .bank-lbl{font-family:'Cinzel',serif;font-size:.73rem;letter-spacing:.11em;color:var(--sindoor-glow);text-transform:uppercase}
-    .bank-sub{font-size:.83rem;color:var(--gold-pale);margin-top:.1rem}
-    .bank-rows{display:flex;flex-direction:column;gap:.58rem}
-    .bank-row{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
-    .bf{font-size:.72rem;color:var(--text-muted);flex-shrink:0;min-width:100px;padding-top:.04rem}
-    .bv{font-size:.86rem;color:var(--text-main);text-align:right;word-break:break-all}
-    .bv.mono{font-family:'Courier New',monospace;font-size:.98rem;color:var(--gold);letter-spacing:.03em}
-    .upi-card{background:linear-gradient(135deg,rgba(15,30,15,.5),rgba(26,40,26,.5));border:1px solid rgba(37,211,102,.2);border-radius:var(--r-lg);padding:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.95rem}
-    .upi-ico{font-size:1.9rem;flex-shrink:0}
-    .upi-lbl{font-family:'Cinzel',serif;font-size:.69rem;letter-spacing:.11em;color:#6BCB8B;text-transform:uppercase;margin-bottom:.18rem}
-    .upi-lbl-te{font-family:'Noto Sans Telugu',sans-serif;font-size:.68rem;color:#6BCB8B;margin-bottom:.18rem}
-    .upi-id{font-family:'Courier New',monospace;font-size:.9rem;color:#9BE8B5;letter-spacing:.02em}
-    .wa-note{margin-top:.95rem;padding:.75rem .95rem;background:rgba(37,211,102,.07);border:1px solid rgba(37,211,102,.2);border-radius:var(--r-sm);font-size:.78rem;color:#7BE0A0;display:flex;align-items:flex-start;gap:.48rem}
-    .pay-note{margin-top:.8rem;font-size:.76rem;color:var(--text-muted);font-style:italic;text-align:center}
-    .cta{text-align:center;margin:2.1rem 0 .9rem;padding:1.55rem 1.2rem;background:rgba(217,79,0,.06);border:1px solid rgba(217,79,0,.2);border-radius:var(--r-lg)}
-    .cta p{font-family:'Crimson Pro',serif;font-style:italic;font-size:clamp(.96rem,3.1vw,1.1rem);color:var(--gold-pale);line-height:1.8}
-    .cta p.te-f{font-family:'Noto Sans Telugu',sans-serif;font-size:clamp(.88rem,2.8vw,1.02rem);line-height:1.88}
-    .cta .mantra{margin-top:.9rem;font-size:.83rem;color:var(--sindoor-glow);letter-spacing:.04em;font-style:normal}
+    .bank-card {
+      background: linear-gradient(135deg, rgba(26, 11, 0, .95), rgba(30, 18, 0, .95));
+      border: 1px solid rgba(217, 79, 0, .25);
+      border-radius: var(--r-lg);
+      padding: 1.35rem 1.15rem;
+      margin-bottom: 1rem
+    }
+
+    .bank-head {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      margin-bottom: 1.15rem;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid rgba(217, 79, 0, .15)
+    }
+
+    .bank-ico {
+      font-size: 1.45rem
+    }
+
+    .bank-lbl {
+      font-family: 'Cinzel', serif;
+      font-size: .73rem;
+      letter-spacing: .11em;
+      color: var(--sindoor-glow);
+      text-transform: uppercase
+    }
+
+    .bank-sub {
+      font-size: .83rem;
+      color: var(--gold-pale);
+      margin-top: .1rem
+    }
+
+    .bank-rows {
+      display: flex;
+      flex-direction: column;
+      gap: .58rem
+    }
+
+    .bank-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: .5rem
+    }
+
+    .bf {
+      font-size: .72rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      min-width: 100px;
+      padding-top: .04rem
+    }
+
+    .bv {
+      font-size: .86rem;
+      color: var(--text-main);
+      text-align: right;
+      word-break: break-all
+    }
+
+    .bv.mono {
+      font-family: 'Courier New', monospace;
+      font-size: .98rem;
+      color: var(--gold);
+      letter-spacing: .03em
+    }
+
+    .upi-card {
+      background: linear-gradient(135deg, rgba(15, 30, 15, .5), rgba(26, 40, 26, .5));
+      border: 1px solid rgba(37, 211, 102, .2);
+      border-radius: var(--r-lg);
+      padding: 1.15rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: .95rem
+    }
+
+    .upi-ico {
+      font-size: 1.9rem;
+      flex-shrink: 0
+    }
+
+    .upi-lbl {
+      font-family: 'Cinzel', serif;
+      font-size: .69rem;
+      letter-spacing: .11em;
+      color: #6BCB8B;
+      text-transform: uppercase;
+      margin-bottom: .18rem
+    }
+
+    .upi-lbl-te {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: .68rem;
+      color: #6BCB8B;
+      margin-bottom: .18rem
+    }
+
+    .upi-id {
+      font-family: 'Courier New', monospace;
+      font-size: .9rem;
+      color: #9BE8B5;
+      letter-spacing: .02em
+    }
+
+    .wa-note {
+      margin-top: .95rem;
+      padding: .75rem .95rem;
+      background: rgba(37, 211, 102, .07);
+      border: 1px solid rgba(37, 211, 102, .2);
+      border-radius: var(--r-sm);
+      font-size: .78rem;
+      color: #7BE0A0;
+      display: flex;
+      align-items: flex-start;
+      gap: .48rem
+    }
+
+    .pay-note {
+      margin-top: .8rem;
+      font-size: .76rem;
+      color: var(--text-muted);
+      font-style: italic;
+      text-align: center
+    }
+
+    .cta {
+      text-align: center;
+      margin: 2.1rem 0 .9rem;
+      padding: 1.55rem 1.2rem;
+      background: rgba(217, 79, 0, .06);
+      border: 1px solid rgba(217, 79, 0, .2);
+      border-radius: var(--r-lg)
+    }
+
+    .cta p {
+      font-family: 'Crimson Pro', serif;
+      font-style: italic;
+      font-size: clamp(.96rem, 3.1vw, 1.1rem);
+      color: var(--gold-pale);
+      line-height: 1.8
+    }
+
+    .cta p.te-f {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: clamp(.88rem, 2.8vw, 1.02rem);
+      line-height: 1.88
+    }
+
+    .cta .mantra {
+      margin-top: .9rem;
+      font-size: .83rem;
+      color: var(--sindoor-glow);
+      letter-spacing: .04em;
+      font-style: normal
+    }
 
     /* Footer */
-    footer{background:var(--dark-panel);border-top:1px solid var(--dark-border);padding:2.4rem 1.2rem 4rem;text-align:center}
-    .f-om{font-size:1.9rem;margin-bottom:.45rem}
-    .f-name{font-family:'Cinzel',serif;font-size:.98rem;font-weight:700;color:var(--sindoor-glow);margin-bottom:.12rem}
-    .f-te{font-family:'Noto Sans Telugu',sans-serif;font-size:.88rem;color:var(--gold);margin-bottom:.95rem}
-    .f-addr{font-size:.78rem;color:var(--text-muted);line-height:1.85;margin-bottom:.95rem}
-    .f-ph{display:inline-flex;align-items:center;gap:.38rem;color:var(--sindoor-glow);text-decoration:none;font-size:.97rem;font-family:'Cinzel',serif}
-    .f-ph:hover{color:var(--gold)}
-    .f-ph2{display:block;color:var(--text-muted);font-size:.8rem;margin-top:.22rem;margin-bottom:1.15rem;text-decoration:none}
-    .f-ph2:hover{color:var(--text-soft)}
-    .lotus{text-align:center;margin:2.2rem 0;font-size:1.35rem;color:var(--gold);letter-spacing:.48rem;opacity:.68}
-    .f-copy{font-size:.66rem;color:var(--text-muted);opacity:.58;margin-top:1.3rem}
+    footer {
+      background: var(--dark-panel);
+      border-top: 1px solid var(--dark-border);
+      padding: 2.4rem 1.2rem 4rem;
+      text-align: center
+    }
 
-    @media(min-width:600px){
-      section{padding:4.8rem 2rem}
-      .attrs{grid-template-columns:repeat(4,1fr)}
-      .gal-item img{height:225px} .gal-item.wide img{height:295px}
-      .founder-photos img{height:265px}
-      .tl-photo img{height:245px}
-      .imgband img{height:370px}
+    .f-om {
+      font-size: 1.9rem;
+      margin-bottom: .45rem
+    }
+
+    .f-name {
+      font-family: 'Cinzel', serif;
+      font-size: .98rem;
+      font-weight: 700;
+      color: var(--sindoor-glow);
+      margin-bottom: .12rem
+    }
+
+    .f-te {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      font-size: .88rem;
+      color: var(--gold);
+      margin-bottom: .95rem
+    }
+
+    .f-addr {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      margin-bottom: .95rem
+    }
+
+    .f-ph {
+      display: inline-flex;
+      align-items: center;
+      gap: .38rem;
+      color: var(--sindoor-glow);
+      text-decoration: none;
+      font-size: .97rem;
+      font-family: 'Cinzel', serif
+    }
+
+    .f-ph:hover {
+      color: var(--gold)
+    }
+
+    .f-ph2 {
+      display: block;
+      color: var(--text-muted);
+      font-size: .8rem;
+      margin-top: .22rem;
+      margin-bottom: 1.15rem;
+      text-decoration: none
+    }
+
+    .f-ph2:hover {
+      color: var(--text-soft)
+    }
+
+    .lotus {
+      text-align: center;
+      margin: 2.2rem 0;
+      font-size: 1.35rem;
+      color: var(--gold);
+      letter-spacing: .48rem;
+      opacity: .68
+    }
+
+    .f-copy {
+      font-size: .66rem;
+      color: var(--text-muted);
+      opacity: .58;
+      margin-top: 1.3rem
+    }
+
+    @media(min-width:600px) {
+      section {
+        padding: 4.8rem 2rem
+      }
+
+      .attrs {
+        grid-template-columns: repeat(4, 1fr)
+      }
+
+      .gal-item img {
+        height: 225px
+      }
+
+      .gal-item.wide img {
+        height: 295px
+      }
+
+      .founder-photos img {
+        height: 265px
+      }
+
+      .tl-photo img {
+        height: 245px
+      }
+
+      .imgband img {
+        height: 370px
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- ===== LANGUAGE POPUP ===== -->
-<div class="lang-popup-overlay" id="langPopup">
-  <div class="lang-popup-box">
-    <div class="lang-popup-om">🕉️</div>
-    <div class="lang-popup-title">Sree Karyasiddhi Hanuman Temple</div>
-    <div class="lang-popup-temple">శ్రీ కార్యసిద్ధి హనుమాన్ ఆలయం</div>
-    <div class="lang-popup-sub">Radhayapalem &middot; Rajanagaram &middot; East Godavari</div>
-    <div class="lang-popup-divider">🙏</div>
-    <div class="lang-popup-ask">Choose your language &nbsp;/&nbsp; భాష ఎంచుకోండి</div>
-    <div class="lang-popup-btns">
-      <button class="lang-popup-btn english" onclick="chooseLang('en')">
-        English
-        <span class="lang-popup-btn-label">Continue in English</span>
+  <!-- ===== LANGUAGE POPUP ===== -->
+  <div class="lang-popup-overlay" id="langPopup">
+    <div class="lang-popup-box">
+      <div class="lang-popup-om">🕉️</div>
+      <div class="lang-popup-title">Sree Karyasiddhi Hanuman Temple</div>
+      <div class="lang-popup-temple">శ్రీ కార్యసిద్ధి హనుమాన్ ఆలయం</div>
+      <div class="lang-popup-sub">Radhayapalem &middot; Rajanagaram &middot; East Godavari</div>
+      <div class="lang-popup-divider">🙏</div>
+      <div class="lang-popup-ask">Choose your language &nbsp;/&nbsp; భాష ఎంచుకోండి</div>
+      <div class="lang-popup-btns">
+        <button class="lang-popup-btn english" onclick="chooseLang('en')">
+          English
+          <span class="lang-popup-btn-label">Continue in English</span>
+        </button>
+        <button class="lang-popup-btn telugu" onclick="chooseLang('te')">
+          తెలుగు
+          <span class="lang-popup-btn-label">తెలుగులో చదవండి</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <nav>
+    <div class="nav-brand">
+      <span class="b1 en">🕉 Sree Karyasiddhi Hanuman Trust</span>
+      <span class="b1 te" style="font-family:'Noto Sans Telugu',sans-serif;color:var(--sindoor-glow);">🕉 శ్రీ
+        కార్యసిద్ధి హనుమాన్ ట్రస్ట్</span>
+      <span class="b2">రాధాయపాలెం &middot; రాజానగరం &middot; తూ.గో.జి.</span>
+    </div>
+    <div class="nav-actions">
+      <button class="lang-btn" onclick="toggleLang()">
+        <span class="en">తెలుగు</span><span class="te">English</span>
       </button>
-      <button class="lang-popup-btn telugu" onclick="chooseLang('te')">
-        తెలుగు
-        <span class="lang-popup-btn-label">తెలుగులో చదవండి</span>
-      </button>
+      <a href="#support" class="donate-btn">
+        <span class="en">🙏 Donate</span><span class="te">🙏 విరాళం</span>
+      </a>
     </div>
-  </div>
-</div>
+  </nav>
 
-<!-- ===== NAV ===== -->
-<nav>
-  <div class="nav-brand">
-    <span class="b1 en">🕉 Sree Karyasiddhi Hanuman Trust</span>
-    <span class="b1 te" style="font-family:'Noto Sans Telugu',sans-serif;color:var(--sindoor-glow);">🕉 శ్రీ కార్యసిద్ధి హనుమాన్ ట్రస్ట్</span>
-    <span class="b2">రాధాయపాలెం &middot; రాజానగరం &middot; తూ.గో.జి.</span>
-  </div>
-  <div class="nav-actions">
-    <button class="lang-btn" onclick="toggleLang()">
-      <span class="en">తెలుగు</span><span class="te">English</span>
-    </button>
-    <a href="#support" class="donate-btn">
-      <span class="en">🙏 Donate</span><span class="te">🙏 విరాళం</span>
-    </a>
-  </div>
-</nav>
-
-<!-- ===== HERO ===== -->
-<section id="hero" style="padding:0;max-width:100%;min-height:100svh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;overflow:hidden;">
-  <div class="hero-bg">
-    <img src="Construction/2.jpeg" alt="Lord Hanuman statue taking divine form — Sri Karyasiddhi Hanuman Temple, Radhayapalem" />
-  </div>
-  <div class="hero-content">
-    <p class="hero-flag en">🚩 SRI RAMA JAYAM 🚩</p>
-    <p class="hero-flag te" style="font-family:'Noto Sans Telugu',sans-serif;">🚩 శ్రీ రామ జయం 🚩</p>
-    <h1 class="hero-title en">Sree Karyasiddhi<br/>Hanuman Temple</h1>
-    <h1 class="hero-title-te te">శ్రీ కార్యసిద్ధి<br/>హనుమాన్ ఆలయం</h1>
-    <p class="hero-sub">
-      <span class="en">A community dream rising in Radhayapalem — brick by brick, prayer by prayer.</span>
-      <span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">రాధాయపాలెంలో ఒక సమాజ స్వప్నం ఆవిర్భవిస్తోంది — ఇటుక ఇటుకగా, ప్రార్థన ప్రార్థనగా.</span>
-    </p>
-    <div class="hero-mantra">
-      <em>"కార్యసిద్ధిం మే దేహి శరణాగత వత్సల |<br/>ఓం శ్రీ కార్యసిద్ధి హనుమతే నమః ||"</em>
+  <!-- ===== HERO ===== -->
+  <section id="hero"
+    style="padding:0;max-width:100%;min-height:100svh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;overflow:hidden;">
+    <div class="hero-bg">
+      <img src="Construction/2.jpeg"
+        alt="Lord Hanuman statue taking divine form — Sri Karyasiddhi Hanuman Temple, Radhayapalem" />
     </div>
-  </div>
-
-  <!-- Scroll indicator -->
-  <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
-    <span class="scroll-indicator-text en">Scroll to explore</span>
-    <span class="scroll-indicator-text te" style="font-family:'Noto Sans Telugu',sans-serif;display:none;">స్క్రోల్ చేయండి</span>
-    <div class="scroll-indicator-arrows">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="hero-content">
+      <p class="hero-flag en">🚩 SRI RAMA JAYAM 🚩</p>
+      <p class="hero-flag te" style="font-family:'Noto Sans Telugu',sans-serif;">🚩 శ్రీ రామ జయం 🚩</p>
+      <h1 class="hero-title en">Sree Karyasiddhi<br />Hanuman Temple</h1>
+      <h1 class="hero-title-te te">శ్రీ కార్యసిద్ధి<br />హనుమాన్ ఆలయం</h1>
+      <p class="hero-sub">
+        <span class="en">A community dream rising in Radhayapalem — brick by brick, prayer by prayer.</span>
+        <span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">రాధాయపాలెంలో ఒక సమాజ స్వప్నం ఆవిర్భవిస్తోంది
+          — ఇటుక ఇటుకగా, ప్రార్థన ప్రార్థనగా.</span>
+      </p>
+      <div class="hero-mantra">
+        <em>"కార్యసిద్ధిం మే దేహి శరణాగత వత్సల |<br />ఓం శ్రీ కార్యసిద్ధి హనుమతే నమః ||"</em>
+      </div>
     </div>
-  </div>
-</section>
 
-<div class="sep"></div>
-
-<!-- ===== ABOUT ===== -->
-<span class="anch" id="about"></span>
-<section>
-  <p class="slbl en">Our Story</p>
-  <p class="slbl te" style="font-family:'Noto Sans Telugu',sans-serif;">మన కథ</p>
-  <h2 class="stitle en">About the Temple</h2>
-  <h2 class="stitle-te te">ఆలయం గురించి</h2>
-
-  <div class="btext en">
-    <p>Radhayapalem is a small, close-knit village in the Rajanagaram Mandal of East Godavari district, Andhra Pradesh — a place where generations of families have grown up together, bound by shared seasons, shared festivals, and a deep, unspoken faith.</p>
-    <p>For years, the devotees of this village felt a deep need for a permanent sacred space — a place where the community could gather not just on special occasions, but every single morning and evening, to begin and end the day in the shelter of the divine. That longing, held quietly in so many hearts, slowly became a shared resolve.</p>
-    <div class="blockquote">"This temple is not built by one person's hands — it is built by the devotion of every family in this village. Every rupee offered here is a prayer. Every brick laid here is a blessing."</div>
-    <p>With the divine blessings of Lord Sri Anjaneya Swamy, the construction of the <strong style="color:var(--gold);">Sree Karyasiddhi Hanuman Temple</strong> has commenced under the <strong style="color:var(--gold);">Sree Karyasiddhi Hanuman Trust</strong> — a temple that will stand for generations, a place of peace and devotion for Radhayapalem and all who seek the Lord's blessings.</p>
-    <p>We invite every devotee, near and far, to witness this sacred journey and become a part of it.</p>
-  </div>
-  <div class="btext te te-f">
-    <p>రాధాయపాలెం అనేది తూర్పు గోదావరి జిల్లాలోని రాజానగరం మండలంలో ఒక చిన్న, ఆత్మీయమైన గ్రామం — అనేక తరాల కుటుంబాలు కలసి పెరిగిన, పండుగలు పంచుకున్న, మనస్ఫూర్తిగా విశ్వసించిన నేల.</p>
-    <p>ఏళ్ళుగా ఈ గ్రామ భక్తులు ఒక శాశ్వత పవిత్ర స్థలం కోసం హృదయపూర్వకంగా కోరుకున్నారు. ఆ కోరిక నెమ్మదిగా సమిష్టి సంకల్పంగా మారింది.</p>
-    <div class="blockquote" style="font-family:'Noto Sans Telugu',sans-serif;">"ఈ ఆలయం ఒక్క వ్యక్తి చేతులతో కట్టలేదు — ఈ గ్రామంలోని ప్రతి కుటుంబం యొక్క భక్తితో నిర్మించబడింది. ఇక్కడ ఇచ్చిన ప్రతి రూపాయి ఒక ప్రార్థన. ఇక్కడ పెట్టిన ప్రతి ఇటుక ఒక అనుగ్రహం."</div>
-    <p>శ్రీ అంజనేయ స్వామి దివ్యాశీస్సులతో <strong style="color:var(--gold);">శ్రీ కార్యసిద్ధి హనుమాన్ ట్రస్ట్</strong> ఆధ్వర్యంలో <strong style="color:var(--gold);">శ్రీ కార్యసిద్ధి హనుమాన్ ఆలయం</strong> నిర్మాణం ప్రారంభమైంది.</p>
-    <p>దూరంగా ఉన్న ప్రతి భక్తుడిని కూడా ఈ పవిత్ర యాత్రలో భాగస్వామి అవ్వమని మేము ఆహ్వానిస్తున్నాం.</p>
-  </div>
-</section>
-
-<div class="imgband"><img src="Construction/1.jpeg" alt="Scaffolding erected around the Hanuman idol construction site — the statue base taking shape" /></div>
-<div class="sep"></div>
-
-<!-- ===== HANUMAN ===== -->
-<span class="anch" id="hanuman"></span>
-<section>
-  <p class="slbl en">The Deity</p>
-  <p class="slbl te" style="font-family:'Noto Sans Telugu',sans-serif;">దేవుడు</p>
-  <h2 class="stitle en">About Lord Hanuman</h2>
-  <h2 class="stitle-te te">శ్రీ హనుమంతుడు</h2>
-
-  <div class="btext en">
-    <p>Across the ages, Bharat has known no devotee more selfless, no warrior more fearless, and no heart more pure than Lord Hanuman — the son of Vayu, the eternal servant of Lord Rama, the destroyer of all obstacles.</p>
-    <p><em>Karyasiddhi</em> — "the one who grants success in all endeavors" — is among Hanuman's most beloved names. In Telugu households, he is invoked before every new beginning: a new business, a new home, a new chapter of life. His promise is timeless: <em>those who surrender to him in faith will never fail.</em></p>
-    <p>This temple enshrines Lord Hanuman in his <strong style="color:var(--gold);">Karyasiddhi</strong> form — the compassionate guardian who blesses sincere devotees and fulfils every heartfelt prayer, now standing eternal over Radhayapalem.</p>
-  </div>
-  <div class="btext te te-f">
-    <p>యుగయుగాలుగా భారతదేశం శ్రీ హనుమంతుని కంటే నిస్వార్థమైన భక్తుడిని, నిర్భయమైన వీరుడిని మరియు పవిత్రమైన హృదయాన్ని మరెవ్వరినీ చూడలేదు — వాయు పుత్రుడు, రాముని శాశ్వత సేవకుడు, విఘ్నాలను నాశనం చేసే దేవుడు.</p>
-    <p><em>కార్యసిద్ధి</em> — "అన్ని కార్యాలలో విజయం ప్రసాదించేవాడు" — ఇది హనుమంతుని అత్యంత ప్రీతిపాత్రమైన నామాలలో ఒకటి. ఆయన మాట శాశ్వతమైనది: <em>విశ్వాసంతో శరణు వేడుకున్నవారు ఎన్నడూ విఫలం కారు.</em></p>
-    <p>ఈ ఆలయం శ్రీ హనుమంతుని <strong style="color:var(--gold);">కార్యసిద్ధి</strong> రూపంలో ప్రతిష్ఠిస్తుంది — నిజమైన భక్తిని చూపించే వారిని ఆశీర్వదించే దయాళువైన రక్షకుడు.</p>
-  </div>
-
-  <div class="attrs">
-    <div class="attr"><div class="aico">💪</div><div class="aname en">Strength</div><div class="aname-te te">శక్తి</div><div class="adesc en">Conqueror of the unconquerable</div><div class="adesc-te te">అజేయుని జయించిన వీరుడు</div></div>
-    <div class="attr"><div class="aico">🙏</div><div class="aname en">Devotion</div><div class="aname-te te">భక్తి</div><div class="adesc en">Supreme devotee of Lord Rama</div><div class="adesc-te te">రాముని పరమ భక్తుడు</div></div>
-    <div class="attr"><div class="aico">✨</div><div class="aname en">Grace</div><div class="aname-te te">అనుగ్రహం</div><div class="adesc en">Grants success in all endeavors</div><div class="adesc-te te">అన్ని కార్యాలలో విజయం</div></div>
-    <div class="attr"><div class="aico">🛡️</div><div class="aname en">Protection</div><div class="aname-te te">రక్షణ</div><div class="adesc en">Shield against all adversity</div><div class="adesc-te te">సమస్త ఆపదలనుండి రక్షణ</div></div>
-  </div>
-</section>
-
-<div class="sep"></div>
-
-<!-- ===== PEOPLE ===== -->
-<span class="anch" id="people"></span>
-<section>
-  <p class="slbl en">The Driving Force</p>
-  <p class="slbl te" style="font-family:'Noto Sans Telugu',sans-serif;">నేతృత్వం</p>
-  <h2 class="stitle en">The People Behind It</h2>
-  <h2 class="stitle-te te">వెనక ఉన్నవారు</h2>
-
-  <div class="btext en" style="margin-bottom:1.4rem;"><p>Every temple rises on the shoulders of someone who believed before others dared to dream. This temple has that person — and behind him, an entire community that chose faith over hesitation.</p></div>
-  <div class="btext te te-f" style="margin-bottom:1.4rem;"><p>ప్రతి దేవాలయం, ఇతరులు కలలు కంటున్నప్పటికీ ముందుగా విశ్వసించిన ఒక వ్యక్తి భుజాలపై నిర్మితమవుతుంది. ఈ ఆలయానికి అలాంటి వ్యక్తి ఉన్నారు — మరియు ఆయన వెనక, విశ్వాసాన్ని ఎంచుకున్న ఒక మొత్తం సమాజం ఉంది.</p></div>
-
-  <div class="founder-card">
-    <div class="founder-photos">
-      <img src="people behind it/WhatsApp Image 2026-09-19 at 3.50.43 PM.jpeg" alt="Padala Venkata Reddy performing Bhoomi Puja — the sacred ground-breaking ceremony" />
-      <img src="people behind it/WhatsApp Image 2026-09-19 at 3.52.00 PM.jpeg" alt="Foundation consecration ceremony" />
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+      <span class="scroll-indicator-text en">Scroll to explore</span>
+      <span class="scroll-indicator-text te" style="font-family:'Noto Sans Telugu',sans-serif;display:none;">స్క్రోల్
+        చేయండి</span>
+      <div class="scroll-indicator-arrows">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-    <div class="founder-info">
-      <div class="fname en">Sri Padala Venkata Reddy</div>
-      <div class="fname-te te">శ్రీ పాదాల వెంకట రెడ్డి</div>
-      <div class="frole en">Founder &amp; Managing Trustee</div>
-      <div class="frole-te te">వ్యవస్థాపకుడు &amp; నిర్వాహక ట్రస్టీ</div>
-      <div class="fquote en">"This is not my temple — it belongs to every devotee who prays here, every family that calls Radhayapalem home, and most of all, to Anjaneya Swamy himself. I am only his instrument. By his grace, this will be completed, and generations will find peace here."</div>
-      <div class="fquote-te te">"ఇది నా ఆలయం కాదు — ఇక్కడ ప్రార్థించే ప్రతి భక్తుడికి, రాధాయపాలెంను స్వంత ఊరుగా భావించే ప్రతి కుటుంబానికి, అన్నింటికంటే ముందు అంజనేయ స్వామికే ఇది చెందుతుంది. నేను కేవలం ఆయన పనిముట్టును."</div>
-      <div class="fcontact">📞 <a href="tel:+919912574449">+91 99125 74449</a> &nbsp;|&nbsp; <a href="tel:+919154777788" style="color:var(--text-muted);">+91 91547 77788</a></div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ===== ABOUT ===== -->
+  <span class="anch" id="about"></span>
+  <section>
+    <p class="slbl en">Our Story</p>
+    <p class="slbl te" style="font-family:'Noto Sans Telugu',sans-serif;">మన కథ</p>
+    <h2 class="stitle en">About the Temple</h2>
+    <h2 class="stitle-te te">ఆలయం గురించి</h2>
+
+    <div class="btext en">
+      <p>Radhayapalem is a small, close-knit village in the Rajanagaram Mandal of East Godavari district, Andhra Pradesh
+        — a place where generations of families have grown up together, bound by shared seasons, shared festivals, and a
+        deep, unspoken faith.</p>
+      <p>For years, the devotees of this village felt a deep need for a permanent sacred space — a place where the
+        community could gather not just on special occasions, but every single morning and evening, to begin and end the
+        day in the shelter of the divine. That longing, held quietly in so many hearts, slowly became a shared resolve.
+      </p>
+      <div class="blockquote">"This temple is not built by one person's hands — it is built by the devotion of every
+        family in this village. Every rupee offered here is a prayer. Every brick laid here is a blessing."</div>
+      <p>With the divine blessings of Lord Sri Anjaneya Swamy, the construction of the <strong
+          style="color:var(--gold);">Sree Karyasiddhi Hanuman Temple</strong> has commenced under the <strong
+          style="color:var(--gold);">Sree Karyasiddhi Hanuman Trust</strong> — a temple that will stand for generations,
+        a place of peace and devotion for Radhayapalem and all who seek the Lord's blessings.</p>
+      <p>We invite every devotee, near and far, to witness this sacred journey and become a part of it.</p>
     </div>
+    <div class="btext te te-f">
+      <p>రాధాయపాలెం అనేది తూర్పు గోదావరి జిల్లాలోని రాజానగరం మండలంలో ఒక చిన్న, ఆత్మీయమైన గ్రామం — అనేక తరాల కుటుంబాలు
+        కలసి పెరిగిన, పండుగలు పంచుకున్న, మనస్ఫూర్తిగా విశ్వసించిన నేల.</p>
+      <p>ఏళ్ళుగా ఈ గ్రామ భక్తులు ఒక శాశ్వత పవిత్ర స్థలం కోసం హృదయపూర్వకంగా కోరుకున్నారు. ఆ కోరిక నెమ్మదిగా సమిష్టి
+        సంకల్పంగా మారింది.</p>
+      <div class="blockquote" style="font-family:'Noto Sans Telugu',sans-serif;">"ఈ ఆలయం ఒక్క వ్యక్తి చేతులతో కట్టలేదు —
+        ఈ గ్రామంలోని ప్రతి కుటుంబం యొక్క భక్తితో నిర్మించబడింది. ఇక్కడ ఇచ్చిన ప్రతి రూపాయి ఒక ప్రార్థన. ఇక్కడ పెట్టిన
+        ప్రతి ఇటుక ఒక అనుగ్రహం."</div>
+      <p>శ్రీ అంజనేయ స్వామి దివ్యాశీస్సులతో <strong style="color:var(--gold);">శ్రీ కార్యసిద్ధి హనుమాన్ ట్రస్ట్</strong>
+        ఆధ్వర్యంలో <strong style="color:var(--gold);">శ్రీ కార్యసిద్ధి హనుమాన్ ఆలయం</strong> నిర్మాణం ప్రారంభమైంది.</p>
+      <p>దూరంగా ఉన్న ప్రతి భక్తుడిని కూడా ఈ పవిత్ర యాత్రలో భాగస్వామి అవ్వమని మేము ఆహ్వానిస్తున్నాం.</p>
+    </div>
+  </section>
+
+  <div class="imgband"><img src="Construction/1.jpeg"
+      alt="Scaffolding erected around the Hanuman idol construction site — the statue base taking shape" /></div>
+  <div class="sep"></div>
+
+  <!-- ===== HANUMAN ===== -->
+  <span class="anch" id="hanuman"></span>
+  <section>
+    <p class="slbl en">The Deity</p>
+    <p class="slbl te" style="font-family:'Noto Sans Telugu',sans-serif;">దేవుడు</p>
+    <h2 class="stitle en">About Lord Hanuman</h2>
+    <h2 class="stitle-te te">శ్రీ హనుమంతుడు</h2>
+
+    <div class="btext en">
+      <p>Across the ages, Bharat has known no devotee more selfless, no warrior more fearless, and no heart more pure
+        than Lord Hanuman — the son of Vayu, the eternal servant of Lord Rama, the destroyer of all obstacles.</p>
+      <p><em>Karyasiddhi</em> — "the one who grants success in all endeavors" — is among Hanuman's most beloved names.
+        In Telugu households, he is invoked before every new beginning: a new business, a new home, a new chapter of
+        life. His promise is timeless: <em>those who surrender to him in faith will never fail.</em></p>
+      <p>This temple enshrines Lord Hanuman in his <strong style="color:var(--gold);">Karyasiddhi</strong> form — the
+        compassionate guardian who blesses sincere devotees and fulfils every heartfelt prayer, now standing eternal
+        over Radhayapalem.</p>
+    </div>
+    <div class="btext te te-f">
+      <p>యుగయుగాలుగా భారతదేశం శ్రీ హనుమంతుని కంటే నిస్వార్థమైన భక్తుడిని, నిర్భయమైన వీరుడిని మరియు పవిత్రమైన హృదయాన్ని
+        మరెవ్వరినీ చూడలేదు — వాయు పుత్రుడు, రాముని శాశ్వత సేవకుడు, విఘ్నాలను నాశనం చేసే దేవుడు.</p>
+      <p><em>కార్యసిద్ధి</em> — "అన్ని కార్యాలలో విజయం ప్రసాదించేవాడు" — ఇది హనుమంతుని అత్యంత ప్రీతిపాత్రమైన నామాలలో
+        ఒకటి. ఆయన మాట శాశ్వతమైనది: <em>విశ్వాసంతో శరణు వేడుకున్నవారు ఎన్నడూ విఫలం కారు.</em></p>
+      <p>ఈ ఆలయం శ్రీ హనుమంతుని <strong style="color:var(--gold);">కార్యసిద్ధి</strong> రూపంలో ప్రతిష్ఠిస్తుంది — నిజమైన
+        భక్తిని చూపించే వారిని ఆశీర్వదించే దయాళువైన రక్షకుడు.</p>
+    </div>
+
+    <div class="attrs">
+      <div class="attr">
+        <div class="aico">💪</div>
+        <div class="aname en">Strength</div>
+        <div class="aname-te te">శక్తి</div>
+        <div class="adesc en">Conqueror of the unconquerable</div>
+        <div class="adesc-te te">అజేయుని జయించిన వీరుడు</div>
+      </div>
+      <div class="attr">
+        <div class="aico">🙏</div>
+        <div class="aname en">Devotion</div>
+        <div class="aname-te te">భక్తి</div>
+        <div class="adesc en">Supreme devotee of Lord Rama</div>
+        <div class="adesc-te te">రాముని పరమ భక్తుడు</div>
+      </div>
+      <div class="attr">
+        <div class="aico">✨</div>
+        <div class="aname en">Grace</div>
+        <div class="aname-te te">అనుగ్రహం</div>
+        <div class="adesc en">Grants success in all endeavors</div>
+        <div class="adesc-te te">అన్ని కార్యాలలో విజయం</div>
+      </div>
+      <div class="attr">
+        <div class="aico">🛡️</div>
+        <div class="aname en">Protection</div>
+        <div class="aname-te te">రక్షణ</div>
+        <div class="adesc en">Shield against all adversity</div>
+        <div class="adesc-te te">సమస్త ఆపదలనుండి రక్షణ</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ===== PEOPLE ===== -->
+  <span class="anch" id="people"></span>
+  <section>
+    <p class="slbl en">The Driving Force</p>
+    <p class="slbl te" style="font-family:'Noto Sans Telugu',sans-serif;">నేతృత్వం</p>
+    <h2 class="stitle en">The People Behind It</h2>
+    <h2 class="stitle-te te">వెనక ఉన్నవారు</h2>
+
+    <div class="btext en" style="margin-bottom:1.4rem;">
+      <p>Every temple rises on the shoulders of someone who believed before others dared to dream. This temple has that
+        person — and behind him, an entire community that chose faith over hesitation.</p>
+    </div>
+    <div class="btext te te-f" style="margin-bottom:1.4rem;">
+      <p>ప్రతి దేవాలయం, ఇతరులు కలలు కంటున్నప్పటికీ ముందుగా విశ్వసించిన ఒక వ్యక్తి భుజాలపై నిర్మితమవుతుంది. ఈ ఆలయానికి
+        అలాంటి వ్యక్తి ఉన్నారు — మరియు ఆయన వెనక, విశ్వాసాన్ని ఎంచుకున్న ఒక మొత్తం సమాజం ఉంది.</p>
+    </div>
+
+    <div class="founder-card">
+      <div class="founder-photos">
+        <img src="people behind it/WhatsApp Image 2026-09-19 at 3.50.43 PM.jpeg"
+          alt="Padala Venkata Reddy performing Bhoomi Puja — the sacred ground-breaking ceremony" />
+        <img src="people behind it/WhatsApp Image 2026-09-19 at 3.52.00 PM.jpeg"
+          alt="Foundation consecration ceremony" />
+      </div>
+      <div class="founder-info">
+        <div class="fname en">Sri Padala Venkata Reddy</div>
+        <div class="fname-te te">శ్రీ పడాల వెంకట రెడ్డి</div>
+        <div class="frole en">Founder &amp; Managing Trustee</div>
+        <div class="frole-te te">వ్యవస్థాపకుడు &amp; నిర్వాహక ట్రస్టీ</div>
+        <div class="fquote en">"This is not my temple — it belongs to every devotee who prays here, every family that
+          calls Radhayapalem home, and most of all, to Anjaneya Swamy himself. I am only his instrument. By his grace,
+          this will be completed, and generations will find peace here."</div>
+        <div class="fquote-te te">"ఇది నా ఆలయం కాదు — ఇక్కడ ప్రార్థించే ప్రతి భక్తుడికి, రాధాయపాలెంను స్వంత ఊరుగా
+          భావించే ప్రతి కుటుంబానికి, అన్నింటికంటే ముందు అంజనేయ స్వామికే ఇది చెందుతుంది. నేను కేవలం ఆయన పనిముట్టును."
+        </div>
+        <div class="fcontact">📞 <a href="tel:+919912574449">+91 99125 74449</a> &nbsp;|&nbsp; <a
+            href="tel:+919154777788" style="color:var(--text-muted);">+91 91547 77788</a></div>
+      </div>
+    </div>
+
+    <div class="btext en" style="margin-top:1.65rem;">
+      <p>The temple is also carried forward by devoted community members, local families, and well-wishers from across
+        East Godavari — each contributing their time, labour, and resources so that this dream does not remain a dream.
+      </p>
+    </div>
+    <div class="btext te te-f" style="margin-top:1.65rem;">
+      <p>తూర్పు గోదావరి నలుమూలల నుండి అంకిత భావంతో ఉన్న సమాజ సభ్యులు, స్థానిక కుటుంబాలు మరియు శుభాకాంక్షులు తమ సమయాన్ని,
+        శ్రమను మరియు వనరులను అందించడం ద్వారా ఈ ఆలయ నిర్మాణాన్ని ముందుకు నడిపిస్తున్నారు.</p>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ===== TIMELINE ===== -->
+  <span class="anch" id="timeline"></span>
+  <section>
+    <p class="slbl en">The Journey</p>
+    <p class="slbl te" style="font-family:'Noto Sans Telugu',sans-serif;">నిర్మాణ యాత్ర</p>
+    <h2 class="stitle en">Construction Journey</h2>
+    <h2 class="stitle-te te">నిర్మాణ పయనం</h2>
+
+    <div class="timeline">
+
+      <!-- Step 1: Bhoomi Puja -->
+      <div class="tl-item">
+        <div class="tl-dot done">🔥</div>
+        <div class="tl-body">
+          <div class="tl-date">May 8, 2026</div>
+          <div class="tl-ttl en">Bhoomi Puja — Sacred Ground Breaking</div>
+          <div class="tl-ttl-te te">భూమి పూజ — పవిత్ర శంకుస్థాపన</div>
+          <div class="tl-desc en">With Vedic mantras, flowers, kumkum, and prayers, the sacred ground-breaking ceremony
+            was performed. The community gathered to witness the auspicious beginning — the day the dream became a
+            resolve and the first stone was blessed by Lord Anjaneya.</div>
+          <div class="tl-desc-te te">వేద మంత్రోచ్చారణలతో, పూలు మరియు కుంకుమ సమర్పణతో, శ్రీ అంజనేయ స్వామి ప్రార్థనలతో
+            పవిత్ర శంకుస్థాపన జరిగింది. కల సంకల్పంగా మారిన ఆ శుభ దినాన సమాజం సమావేశమైంది.</div>
+          <div class="tl-photo"
+            onclick="openLB('people behind it/WhatsApp Image 2026-09-19 at 3.50.43 PM.jpeg','Bhoomi Puja — Sacred ground-breaking ceremony, May 8, 2026')">
+            <img src="people behind it/WhatsApp Image 2026-09-19 at 3.50.43 PM.jpeg" alt="Bhoomi Puja May 2026"
+              loading="lazy" />
+            <div class="tl-cap en">Bhoomi Puja &middot; May 8, 2026 &middot; Radhayapalem</div>
+            <div class="tl-cap-te te">భూమి పూజ &middot; మే 8, 2026 &middot; రాధాయపాలెం</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Foundation -->
+      <div class="tl-item">
+        <div class="tl-dot done">🧱</div>
+        <div class="tl-body">
+          <div class="tl-date">May – June 2026</div>
+          <div class="tl-ttl en">Foundation &amp; Base Construction</div>
+          <div class="tl-ttl-te te">పునాది &amp; ఆధార నిర్మాణం</div>
+          <div class="tl-desc en">The foundation was dug and consecrated with sacred rituals. Concrete pillars were
+            erected to form the solid base upon which the grand Hanuman idol and the temple structure would stand. The
+            platform for the idol was carefully laid and blessed.</div>
+          <div class="tl-desc-te te">పునాది తవ్వి, ఆచారాలతో పవిత్రం చేశారు. కాంక్రీట్ స్తంభాలు నాటబడ్డాయి. శ్రీ
+            హనుమంతుని మహా విగ్రహం మరియు ఆలయ నిర్మాణం నిలబడే గట్టి పునాది నిర్మించబడింది.</div>
+          <div class="tl-photo"
+            onclick="openLB('people behind it/WhatsApp Image 2026-09-19 at 3.52.00 PM.jpeg','Foundation consecration — prayers offered in the newly dug foundation pit')">
+            <img src="people behind it/WhatsApp Image 2026-09-19 at 3.52.00 PM.jpeg" alt="Foundation consecration"
+              loading="lazy" />
+            <div class="tl-cap en">Foundation consecration &middot; June 2026</div>
+            <div class="tl-cap-te te">పునాది అభిషేకం &middot; జూన్ 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Idol Construction (CORRECTED — was wrongly called gopuram) -->
+      <div class="tl-item">
+        <div class="tl-dot done">🗿</div>
+        <div class="tl-body">
+          <div class="tl-date">July – August 2026</div>
+          <div class="tl-ttl en">Hanuman Idol Construction Begins</div>
+          <div class="tl-ttl-te te">హనుమంతుని విగ్రహ నిర్మాణం ప్రారంభం</div>
+          <div class="tl-desc en">The construction of the magnificent standing Hanuman idol began in earnest. A large
+            bamboo and timber scaffolding was erected all around the idol to provide the craftsmen safe access to every
+            level as they chiseled and shaped the stone form of Lord Hanuman — a towering, majestic figure that will
+            watch over Radhayapalem for generations.</div>
+          <div class="tl-desc-te te">అద్భుతమైన నిలబడిన హనుమంతుని విగ్రహ నిర్మాణం శ్రద్ధగా ప్రారంభమైంది. శిల్పులు
+            విగ్రహంలోని ప్రతి భాగాన్ని సురక్షితంగా చెక్కేందుకు, వెదురు మరియు కలప మచ్చులు విగ్రహం చుట్టూ నిర్మించబడ్డాయి
+            — రాధాయపాలెంను తరతరాలు కాపాడే ఆ మహా విగ్రహం రూపుదిద్దుకోవడం ప్రారంభమైంది.</div>
+          <div class="tl-photo"
+            onclick="openLB('Construction/1.jpeg','Scaffolding erected around the Hanuman idol construction — craftsmen at work on the statue base')">
+            <img src="Construction/1.jpeg" alt="Scaffolding around the Hanuman idol under construction"
+              loading="lazy" />
+            <div class="tl-cap en">Idol construction scaffolding &middot; July–August 2026</div>
+            <div class="tl-cap-te te">విగ్రహ నిర్మాణ మచ్చులు &middot; జూలై–ఆగష్టు 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Current (idol detailing) -->
+      <div class="tl-item">
+        <div class="tl-dot active">⚡</div>
+        <div class="tl-body">
+          <div class="tl-date">September 2026 — Current Stage</div>
+          <div class="tl-ttl en">Idol Detailing &amp; Decorative Sculpture — In Progress</div>
+          <div class="tl-ttl-te te">విగ్రహ వివరాల శిల్పకళ — జరుగుతోంది</div>
+          <div class="tl-desc en">The magnificent standing idol of Sri Karyasiddhi Hanuman is taking form — his divine
+            silhouette visible through the scaffolding, filling all who see him with reverence. Master artisans are now
+            crafting the intricate details — the divine Pushpaka Vimana scene, the ornate temple entrance arch with
+            celestial figures, and the finer carvings that bring the deity to life.</div>
+          <div class="tl-desc-te te">శ్రీ కార్యసిద్ధి హనుమంతుని అద్భుతమైన విగ్రహం రూపుదిద్దుకుంటోంది — ఆయన దివ్య ఆకృతి
+            మచ్చుల మధ్య నుండి కూడా కనిపిస్తోంది. దివ్య పుష్పక విమాన దృశ్యం, ఆలయ ప్రవేశ ద్వారం, దివ్య ఆకృతుల మెళుకువలు
+            తయారు చేయబడుతున్నాయి.</div>
+        </div>
+      </div>
+
+      <!-- Step 5: Completion -->
+      <div class="tl-item">
+        <div class="tl-dot upcoming">🕌</div>
+        <div class="tl-body">
+          <div class="tl-date">Coming Soon &middot; త్వరలో</div>
+          <div class="tl-ttl en">Completion, Painting &amp; Kumbhabhishekam</div>
+          <div class="tl-ttl-te te" style="color:var(--gold-pale);">పూర్తి, రంగులు &amp; కుంభాభిషేకం</div>
+          <div class="tl-desc en">Final finishing, sacred paintings on the idol and temple, and the grand
+            Kumbhabhishekam consecration ceremony. The exact date will be announced. All devotees are warmly invited to
+            attend and receive Lord Hanuman's blessings on that auspicious day.</div>
+          <div class="tl-desc-te te">చివరి ముగింపు, పవిత్ర రంగులు మరియు కుంభాభిషేకం. ఖచ్చితమైన తేదీ త్వరలో
+            ప్రకటించబడుతుంది. అన్ని భక్తులను ఆహ్వానిస్తున్నాం.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ===== GALLERY ===== -->
+  <span class="anch" id="gallery"></span>
+  <section>
+    <p class="slbl en">Visual Chronicle</p>
+    <p class="slbl te" style="font-family:'Noto Sans Telugu',sans-serif;">చిత్ర దర్శనం</p>
+    <h2 class="stitle en">Photo Gallery</h2>
+    <h2 class="stitle-te te">ఫోటో గ్యాలరీ</h2>
+    <div class="btext en" style="margin-bottom:.5rem;">
+      <p>Stone, labour, faith, and artistry — converging into something eternal. Tap any photo to enlarge.</p>
+    </div>
+    <div class="btext te te-f" style="margin-bottom:.5rem;">
+      <p>రాయి, శ్రమ, విశ్వాసం మరియు కళాత్మకత — శాశ్వతమైన ఏదైనా నిర్మిస్తున్నాయి. ఫోటో నొక్కి పెద్దదిగా చూడండి.</p>
+    </div>
+
+    <div class="gal-grid">
+      <div class="gal-item wide"
+        onclick="openLB('Construction/2.jpeg','The divine form of Sri Karyasiddhi Hanuman taking shape through the construction scaffolding')">
+        <img src="Construction/2.jpeg" alt="Sri Karyasiddhi Hanuman idol taking shape" loading="lazy" />
+        <div class="gal-cap"><span class="en">Sri Karyasiddhi Hanuman — the idol taking divine form</span><span
+            class="te" style="font-family:'Noto Sans Telugu',sans-serif;">శ్రీ కార్యసిద్ధి హనుమంతుడు — విగ్రహం దివ్య
+            రూపం పొందుతోంది</span></div>
+      </div>
+      <div class="gal-item"
+        onclick="openLB('Construction/1.jpeg','Scaffolding built around the Hanuman statue — craftsmen working on the idol base')">
+        <img src="Construction/1.jpeg" alt="Scaffolding around the Hanuman idol construction" loading="lazy" />
+        <div class="gal-cap"><span class="en">Idol construction — scaffolding supports the craftsmen</span><span
+            class="te" style="font-family:'Noto Sans Telugu',sans-serif;">విగ్రహ నిర్మాణ మచ్చులు</span></div>
+      </div>
+      <div class="gal-item"
+        onclick="openLB('Construction/3.jpeg','Divine Pushpaka Vimana scene — celestial figures sculpted for the temple')">
+        <img src="Construction/3.jpeg" alt="Pushpaka Vimana sculpture" loading="lazy" />
+        <div class="gal-cap"><span class="en">Pushpaka Vimana — divine boat sculpture</span><span class="te"
+            style="font-family:'Noto Sans Telugu',sans-serif;">దివ్య వాహన శిల్పం</span></div>
+      </div>
+      <div class="gal-item wide"
+        onclick="openLB('Construction/4.jpeg','Temple entrance arch sculpted with celestial figures and elephants')">
+        <img src="Construction/4.jpeg" alt="Temple entrance arch" loading="lazy" />
+        <div class="gal-cap"><span class="en">Ornate entrance arch — carved with divine figures</span><span class="te"
+            style="font-family:'Noto Sans Telugu',sans-serif;">ఆలయ ప్రవేశ ద్వారం — దివ్య ఆకృతులతో</span></div>
+      </div>
+      <div class="gal-item"
+        onclick="openLB('people behind it/WhatsApp Image 2026-09-19 at 3.50.43 PM.jpeg','Bhoomi Puja ceremony — May 8, 2026')">
+        <img src="people behind it/WhatsApp Image 2026-09-19 at 3.50.43 PM.jpeg" alt="Bhoomi Puja" loading="lazy" />
+        <div class="gal-cap"><span class="en">Bhoomi Puja &middot; May 8, 2026</span><span class="te"
+            style="font-family:'Noto Sans Telugu',sans-serif;">భూమి పూజ &middot; మే 8, 2026</span></div>
+      </div>
+      <div class="gal-item"
+        onclick="openLB('people behind it/WhatsApp Image 2026-09-19 at 3.52.00 PM.jpeg','Foundation consecration — prayers at the foundation pit')">
+        <img src="people behind it/WhatsApp Image 2026-09-19 at 3.52.00 PM.jpeg" alt="Foundation consecration"
+          loading="lazy" />
+        <div class="gal-cap"><span class="en">Foundation consecration</span><span class="te"
+            style="font-family:'Noto Sans Telugu',sans-serif;">పునాది అభిషేకం</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox lb" id="lb" onclick="closeLB()">
+    <button class="lb-x" onclick="closeLB()">&#x2715;</button>
+    <img id="lb-img" src="" alt="" onclick="event.stopPropagation()" />
+    <div class="lb-cap" id="lb-cap"></div>
   </div>
 
-  <div class="btext en" style="margin-top:1.65rem;"><p>The temple is also carried forward by devoted community members, local families, and well-wishers from across East Godavari — each contributing their time, labour, and resources so that this dream does not remain a dream.</p></div>
-  <div class="btext te te-f" style="margin-top:1.65rem;"><p>తూర్పు గోదావరి నలుమూలల నుండి అంకిత భావంతో ఉన్న సమాజ సభ్యులు, స్థానిక కుటుంబాలు మరియు శుభాకాంక్షులు తమ సమయాన్ని, శ్రమను మరియు వనరులను అందించడం ద్వారా ఈ ఆలయ నిర్మాణాన్ని ముందుకు నడిపిస్తున్నారు.</p></div>
-</section>
+  <div class="sep"></div>
 
-<div class="sep"></div>
+  <!-- ===== SUPPORT ===== -->
+  <span class="anch" id="support"></span>
+  <section>
+    <p class="slbl en">Support the Cause</p>
+    <p class="slbl te" style="font-family:'Noto Sans Telugu',sans-serif;">సహాయం చేయండి</p>
+    <h2 class="stitle en">Be a Part of This Temple</h2>
+    <h2 class="stitle-te te">ఈ ఆలయంలో భాగస్వామి అవ్వండి</h2>
 
-<!-- ===== TIMELINE ===== -->
-<span class="anch" id="timeline"></span>
-<section>
-  <p class="slbl en">The Journey</p>
-  <p class="slbl te" style="font-family:'Noto Sans Telugu',sans-serif;">నిర్మాణ యాత్ర</p>
-  <h2 class="stitle en">Construction Journey</h2>
-  <h2 class="stitle-te te">నిర్మాణ పయనం</h2>
+    <div class="btext en" style="color:var(--text-soft);margin-bottom:1.9rem;">
+      <p>This temple is entirely <strong style="color:var(--cream);">community-funded</strong> — built not by
+        institutional grants, but by the collective faith and generosity of devotees like you. Every contribution,
+        however large or small, goes directly toward construction, the idol, and the eventual consecration of this
+        sacred space.</p>
+      <p style="margin-top:.9em;"><strong style="color:var(--cream);">You too can be behind this construction</strong> —
+        by lending your support, you become one of the many hands that helped build this eternal home for Lord Hanuman
+        in Radhayapalem.</p>
+    </div>
+    <div class="btext te te-f" style="color:var(--text-soft);margin-bottom:1.9rem;">
+      <p>ఈ ఆలయం పూర్తిగా <strong style="color:var(--cream);">సమాజం నిధులతో</strong> నిర్మించబడుతోంది — మీలాంటి భక్తుల
+        సమిష్టి విశ్వాసం మరియు దానశీలత ద్వారా. ప్రతి విరాళం నేరుగా నిర్మాణం మరియు కుంభాభిషేకానికి వెళ్తుంది.</p>
+      <p style="margin-top:.9em;"><strong style="color:var(--cream);">మీరు కూడా ఈ నిర్మాణంలో వెనక ఉండవచ్చు</strong> — మీ
+        సహాయాన్ని అందించడం ద్వారా రాధాయపాలెంలో శ్రీ హనుమంతునికి ఈ శాశ్వత ఆలయం నిర్మించిన అనేక చేతులలో ఒకరు అవ్వవచ్చు.
+      </p>
+    </div>
 
-  <div class="timeline">
-
-    <!-- Step 1: Bhoomi Puja -->
-    <div class="tl-item">
-      <div class="tl-dot done">🔥</div>
-      <div class="tl-body">
-        <div class="tl-date">May 8, 2026</div>
-        <div class="tl-ttl en">Bhoomi Puja — Sacred Ground Breaking</div>
-        <div class="tl-ttl-te te">భూమి పూజ — పవిత్ర శంకుస్థాపన</div>
-        <div class="tl-desc en">With Vedic mantras, flowers, kumkum, and prayers, the sacred ground-breaking ceremony was performed. The community gathered to witness the auspicious beginning — the day the dream became a resolve and the first stone was blessed by Lord Anjaneya.</div>
-        <div class="tl-desc-te te">వేద మంత్రోచ్చారణలతో, పూలు మరియు కుంకుమ సమర్పణతో, శ్రీ అంజనేయ స్వామి ప్రార్థనలతో పవిత్ర శంకుస్థాపన జరిగింది. కల సంకల్పంగా మారిన ఆ శుభ దినాన సమాజం సమావేశమైంది.</div>
-        <div class="tl-photo" onclick="openLB('people behind it/WhatsApp Image 2026-09-19 at 3.50.43 PM.jpeg','Bhoomi Puja — Sacred ground-breaking ceremony, May 8, 2026')">
-          <img src="people behind it/WhatsApp Image 2026-09-19 at 3.50.43 PM.jpeg" alt="Bhoomi Puja May 2026" loading="lazy" />
-          <div class="tl-cap en">Bhoomi Puja &middot; May 8, 2026 &middot; Radhayapalem</div>
-          <div class="tl-cap-te te">భూమి పూజ &middot; మే 8, 2026 &middot; రాధాయపాలెం</div>
+    <div class="bank-card">
+      <div class="bank-head">
+        <div class="bank-ico">🏦</div>
+        <div>
+          <div class="bank-lbl en">Bank Transfer</div>
+          <div class="bank-lbl te" style="font-family:'Noto Sans Telugu',sans-serif;">బ్యాంకు బదిలీ</div>
+          <div class="bank-sub en">State Bank of India — Diwancheruvu Branch</div>
+          <div class="bank-sub te" style="font-family:'Noto Sans Telugu',sans-serif;">స్టేట్ బ్యాంక్ ఆఫ్ ఇండియా —
+            దివాన్‌చెరువు శాఖ</div>
+        </div>
+      </div>
+      <div class="bank-rows">
+        <div class="bank-row">
+          <div class="bf en">Account Name</div>
+          <div class="bf te" style="font-family:'Noto Sans Telugu',sans-serif;">ఖాతా పేరు</div>
+          <div class="bv">Sree Karyasiddhi Hanuman Trust</div>
+        </div>
+        <div class="bank-row">
+          <div class="bf en">Account No.</div>
+          <div class="bf te" style="font-family:'Noto Sans Telugu',sans-serif;">ఖాతా నంబర్</div>
+          <div class="bv mono">45582884004</div>
+        </div>
+        <div class="bank-row">
+          <div class="bf en">IFSC Code</div>
+          <div class="bf te" style="font-family:'Noto Sans Telugu',sans-serif;">IFSC కోడ్</div>
+          <div class="bv mono">SBIN0008819</div>
+        </div>
+        <div class="bank-row">
+          <div class="bf en">Bank</div>
+          <div class="bf te" style="font-family:'Noto Sans Telugu',sans-serif;">బ్యాంకు</div>
+          <div class="bv">State Bank of India</div>
+        </div>
+        <div class="bank-row">
+          <div class="bf en">Branch</div>
+          <div class="bf te" style="font-family:'Noto Sans Telugu',sans-serif;">శాఖ</div>
+          <div class="bv">Diwancheruvu</div>
         </div>
       </div>
     </div>
 
-    <!-- Step 2: Foundation -->
-    <div class="tl-item">
-      <div class="tl-dot done">🧱</div>
-      <div class="tl-body">
-        <div class="tl-date">May – June 2026</div>
-        <div class="tl-ttl en">Foundation &amp; Base Construction</div>
-        <div class="tl-ttl-te te">పునాది &amp; ఆధార నిర్మాణం</div>
-        <div class="tl-desc en">The foundation was dug and consecrated with sacred rituals. Concrete pillars were erected to form the solid base upon which the grand Hanuman idol and the temple structure would stand. The platform for the idol was carefully laid and blessed.</div>
-        <div class="tl-desc-te te">పునాది తవ్వి, ఆచారాలతో పవిత్రం చేశారు. కాంక్రీట్ స్తంభాలు నాటబడ్డాయి. శ్రీ హనుమంతుని మహా విగ్రహం మరియు ఆలయ నిర్మాణం నిలబడే గట్టి పునాది నిర్మించబడింది.</div>
-        <div class="tl-photo" onclick="openLB('people behind it/WhatsApp Image 2026-09-19 at 3.52.00 PM.jpeg','Foundation consecration — prayers offered in the newly dug foundation pit')">
-          <img src="people behind it/WhatsApp Image 2026-09-19 at 3.52.00 PM.jpeg" alt="Foundation consecration" loading="lazy" />
-          <div class="tl-cap en">Foundation consecration &middot; June 2026</div>
-          <div class="tl-cap-te te">పునాది అభిషేకం &middot; జూన్ 2026</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Step 3: Idol Construction (CORRECTED — was wrongly called gopuram) -->
-    <div class="tl-item">
-      <div class="tl-dot done">🗿</div>
-      <div class="tl-body">
-        <div class="tl-date">July – August 2026</div>
-        <div class="tl-ttl en">Hanuman Idol Construction Begins</div>
-        <div class="tl-ttl-te te">హనుమంతుని విగ్రహ నిర్మాణం ప్రారంభం</div>
-        <div class="tl-desc en">The construction of the magnificent standing Hanuman idol began in earnest. A large bamboo and timber scaffolding was erected all around the idol to provide the craftsmen safe access to every level as they chiseled and shaped the stone form of Lord Hanuman — a towering, majestic figure that will watch over Radhayapalem for generations.</div>
-        <div class="tl-desc-te te">అద్భుతమైన నిలబడిన హనుమంతుని విగ్రహ నిర్మాణం శ్రద్ధగా ప్రారంభమైంది. శిల్పులు విగ్రహంలోని ప్రతి భాగాన్ని సురక్షితంగా చెక్కేందుకు, వెదురు మరియు కలప మచ్చులు విగ్రహం చుట్టూ నిర్మించబడ్డాయి — రాధాయపాలెంను తరతరాలు కాపాడే ఆ మహా విగ్రహం రూపుదిద్దుకోవడం ప్రారంభమైంది.</div>
-        <div class="tl-photo" onclick="openLB('Construction/1.jpeg','Scaffolding erected around the Hanuman idol construction — craftsmen at work on the statue base')">
-          <img src="Construction/1.jpeg" alt="Scaffolding around the Hanuman idol under construction" loading="lazy" />
-          <div class="tl-cap en">Idol construction scaffolding &middot; July–August 2026</div>
-          <div class="tl-cap-te te">విగ్రహ నిర్మాణ మచ్చులు &middot; జూలై–ఆగష్టు 2026</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Step 4: Current (idol detailing) -->
-    <div class="tl-item">
-      <div class="tl-dot active">⚡</div>
-      <div class="tl-body">
-        <div class="tl-date">September 2026 — Current Stage</div>
-        <div class="tl-ttl en">Idol Detailing &amp; Decorative Sculpture — In Progress</div>
-        <div class="tl-ttl-te te">విగ్రహ వివరాల శిల్పకళ — జరుగుతోంది</div>
-        <div class="tl-desc en">The magnificent standing idol of Sri Karyasiddhi Hanuman is taking form — his divine silhouette visible through the scaffolding, filling all who see him with reverence. Master artisans are now crafting the intricate details — the divine Pushpaka Vimana scene, the ornate temple entrance arch with celestial figures, and the finer carvings that bring the deity to life.</div>
-        <div class="tl-desc-te te">శ్రీ కార్యసిద్ధి హనుమంతుని అద్భుతమైన విగ్రహం రూపుదిద్దుకుంటోంది — ఆయన దివ్య ఆకృతి మచ్చుల మధ్య నుండి కూడా కనిపిస్తోంది. దివ్య పుష్పక విమాన దృశ్యం, ఆలయ ప్రవేశ ద్వారం, దివ్య ఆకృతుల మెళుకువలు తయారు చేయబడుతున్నాయి.</div>
-      </div>
-    </div>
-
-    <!-- Step 5: Completion -->
-    <div class="tl-item">
-      <div class="tl-dot upcoming">🕌</div>
-      <div class="tl-body">
-        <div class="tl-date">Coming Soon &middot; త్వరలో</div>
-        <div class="tl-ttl en">Completion, Painting &amp; Kumbhabhishekam</div>
-        <div class="tl-ttl-te te" style="color:var(--gold-pale);">పూర్తి, రంగులు &amp; కుంభాభిషేకం</div>
-        <div class="tl-desc en">Final finishing, sacred paintings on the idol and temple, and the grand Kumbhabhishekam consecration ceremony. The exact date will be announced. All devotees are warmly invited to attend and receive Lord Hanuman's blessings on that auspicious day.</div>
-        <div class="tl-desc-te te">చివరి ముగింపు, పవిత్ర రంగులు మరియు కుంభాభిషేకం. ఖచ్చితమైన తేదీ త్వరలో ప్రకటించబడుతుంది. అన్ని భక్తులను ఆహ్వానిస్తున్నాం.</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<div class="sep"></div>
-
-<!-- ===== GALLERY ===== -->
-<span class="anch" id="gallery"></span>
-<section>
-  <p class="slbl en">Visual Chronicle</p>
-  <p class="slbl te" style="font-family:'Noto Sans Telugu',sans-serif;">చిత్ర దర్శనం</p>
-  <h2 class="stitle en">Photo Gallery</h2>
-  <h2 class="stitle-te te">ఫోటో గ్యాలరీ</h2>
-  <div class="btext en" style="margin-bottom:.5rem;"><p>Stone, labour, faith, and artistry — converging into something eternal. Tap any photo to enlarge.</p></div>
-  <div class="btext te te-f" style="margin-bottom:.5rem;"><p>రాయి, శ్రమ, విశ్వాసం మరియు కళాత్మకత — శాశ్వతమైన ఏదైనా నిర్మిస్తున్నాయి. ఫోటో నొక్కి పెద్దదిగా చూడండి.</p></div>
-
-  <div class="gal-grid">
-    <div class="gal-item wide" onclick="openLB('Construction/2.jpeg','The divine form of Sri Karyasiddhi Hanuman taking shape through the construction scaffolding')">
-      <img src="Construction/2.jpeg" alt="Sri Karyasiddhi Hanuman idol taking shape" loading="lazy" />
-      <div class="gal-cap"><span class="en">Sri Karyasiddhi Hanuman — the idol taking divine form</span><span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">శ్రీ కార్యసిద్ధి హనుమంతుడు — విగ్రహం దివ్య రూపం పొందుతోంది</span></div>
-    </div>
-    <div class="gal-item" onclick="openLB('Construction/1.jpeg','Scaffolding built around the Hanuman statue — craftsmen working on the idol base')">
-      <img src="Construction/1.jpeg" alt="Scaffolding around the Hanuman idol construction" loading="lazy" />
-      <div class="gal-cap"><span class="en">Idol construction — scaffolding supports the craftsmen</span><span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">విగ్రహ నిర్మాణ మచ్చులు</span></div>
-    </div>
-    <div class="gal-item" onclick="openLB('Construction/3.jpeg','Divine Pushpaka Vimana scene — celestial figures sculpted for the temple')">
-      <img src="Construction/3.jpeg" alt="Pushpaka Vimana sculpture" loading="lazy" />
-      <div class="gal-cap"><span class="en">Pushpaka Vimana — divine boat sculpture</span><span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">దివ్య వాహన శిల్పం</span></div>
-    </div>
-    <div class="gal-item wide" onclick="openLB('Construction/4.jpeg','Temple entrance arch sculpted with celestial figures and elephants')">
-      <img src="Construction/4.jpeg" alt="Temple entrance arch" loading="lazy" />
-      <div class="gal-cap"><span class="en">Ornate entrance arch — carved with divine figures</span><span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">ఆలయ ప్రవేశ ద్వారం — దివ్య ఆకృతులతో</span></div>
-    </div>
-    <div class="gal-item" onclick="openLB('people behind it/WhatsApp Image 2026-09-19 at 3.50.43 PM.jpeg','Bhoomi Puja ceremony — May 8, 2026')">
-      <img src="people behind it/WhatsApp Image 2026-09-19 at 3.50.43 PM.jpeg" alt="Bhoomi Puja" loading="lazy" />
-      <div class="gal-cap"><span class="en">Bhoomi Puja &middot; May 8, 2026</span><span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">భూమి పూజ &middot; మే 8, 2026</span></div>
-    </div>
-    <div class="gal-item" onclick="openLB('people behind it/WhatsApp Image 2026-09-19 at 3.52.00 PM.jpeg','Foundation consecration — prayers at the foundation pit')">
-      <img src="people behind it/WhatsApp Image 2026-09-19 at 3.52.00 PM.jpeg" alt="Foundation consecration" loading="lazy" />
-      <div class="gal-cap"><span class="en">Foundation consecration</span><span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">పునాది అభిషేకం</span></div>
-    </div>
-  </div>
-</section>
-
-<div class="lightbox lb" id="lb" onclick="closeLB()">
-  <button class="lb-x" onclick="closeLB()">&#x2715;</button>
-  <img id="lb-img" src="" alt="" onclick="event.stopPropagation()" />
-  <div class="lb-cap" id="lb-cap"></div>
-</div>
-
-<div class="sep"></div>
-
-<!-- ===== SUPPORT ===== -->
-<span class="anch" id="support"></span>
-<section>
-  <p class="slbl en">Support the Cause</p>
-  <p class="slbl te" style="font-family:'Noto Sans Telugu',sans-serif;">సహాయం చేయండి</p>
-  <h2 class="stitle en">Be a Part of This Temple</h2>
-  <h2 class="stitle-te te">ఈ ఆలయంలో భాగస్వామి అవ్వండి</h2>
-
-  <div class="btext en" style="color:var(--text-soft);margin-bottom:1.9rem;">
-    <p>This temple is entirely <strong style="color:var(--cream);">community-funded</strong> — built not by institutional grants, but by the collective faith and generosity of devotees like you. Every contribution, however large or small, goes directly toward construction, the idol, and the eventual consecration of this sacred space.</p>
-    <p style="margin-top:.9em;"><strong style="color:var(--cream);">You too can be behind this construction</strong> — by lending your support, you become one of the many hands that helped build this eternal home for Lord Hanuman in Radhayapalem.</p>
-  </div>
-  <div class="btext te te-f" style="color:var(--text-soft);margin-bottom:1.9rem;">
-    <p>ఈ ఆలయం పూర్తిగా <strong style="color:var(--cream);">సమాజం నిధులతో</strong> నిర్మించబడుతోంది — మీలాంటి భక్తుల సమిష్టి విశ్వాసం మరియు దానశీలత ద్వారా. ప్రతి విరాళం నేరుగా నిర్మాణం మరియు కుంభాభిషేకానికి వెళ్తుంది.</p>
-    <p style="margin-top:.9em;"><strong style="color:var(--cream);">మీరు కూడా ఈ నిర్మాణంలో వెనక ఉండవచ్చు</strong> — మీ సహాయాన్ని అందించడం ద్వారా రాధాయపాలెంలో శ్రీ హనుమంతునికి ఈ శాశ్వత ఆలయం నిర్మించిన అనేక చేతులలో ఒకరు అవ్వవచ్చు.</p>
-  </div>
-
-  <div class="bank-card">
-    <div class="bank-head">
-      <div class="bank-ico">🏦</div>
+    <div class="upi-card">
+      <div class="upi-ico">📱</div>
       <div>
-        <div class="bank-lbl en">Bank Transfer</div>
-        <div class="bank-lbl te" style="font-family:'Noto Sans Telugu',sans-serif;">బ్యాంకు బదిలీ</div>
-        <div class="bank-sub en">State Bank of India — Diwancheruvu Branch</div>
-        <div class="bank-sub te" style="font-family:'Noto Sans Telugu',sans-serif;">స్టేట్ బ్యాంక్ ఆఫ్ ఇండియా — దివాన్‌చెరువు శాఖ</div>
+        <div class="upi-lbl en">PhonePe / GPay / Any UPI</div>
+        <div class="upi-lbl-te te">ఫోన్‌పే / గూగుల్ పే / UPI</div>
+        <div class="upi-id">wwwreddy.padala3@ybl</div>
+        <div style="margin-top:.28rem;font-size:.72rem;color:#6BCB8B;">
+          <span class="en">Also pay directly to: 9912574449 (PhonePe / GPay)</span>
+          <span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">నేరుగా: 9912574449 (ఫోన్‌పే / గూగుల్
+            పే)</span>
+        </div>
       </div>
     </div>
-    <div class="bank-rows">
-      <div class="bank-row"><div class="bf en">Account Name</div><div class="bf te" style="font-family:'Noto Sans Telugu',sans-serif;">ఖాతా పేరు</div><div class="bv">Sree Karyasiddhi Hanuman Trust</div></div>
-      <div class="bank-row"><div class="bf en">Account No.</div><div class="bf te" style="font-family:'Noto Sans Telugu',sans-serif;">ఖాతా నంబర్</div><div class="bv mono">45582884004</div></div>
-      <div class="bank-row"><div class="bf en">IFSC Code</div><div class="bf te" style="font-family:'Noto Sans Telugu',sans-serif;">IFSC కోడ్</div><div class="bv mono">SBIN0008819</div></div>
-      <div class="bank-row"><div class="bf en">Bank</div><div class="bf te" style="font-family:'Noto Sans Telugu',sans-serif;">బ్యాంకు</div><div class="bv">State Bank of India</div></div>
-      <div class="bank-row"><div class="bf en">Branch</div><div class="bf te" style="font-family:'Noto Sans Telugu',sans-serif;">శాఖ</div><div class="bv">Diwancheruvu</div></div>
-    </div>
-  </div>
 
-  <div class="upi-card">
-    <div class="upi-ico">📱</div>
-    <div>
-      <div class="upi-lbl en">PhonePe / GPay / Any UPI</div>
-      <div class="upi-lbl-te te">ఫోన్‌పే / గూగుల్ పే / UPI</div>
-      <div class="upi-id">wwwreddy.padala3@ybl</div>
-      <div style="margin-top:.28rem;font-size:.72rem;color:#6BCB8B;">
-        <span class="en">Also pay directly to: 9912574449 (PhonePe / GPay)</span>
-        <span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">నేరుగా: 9912574449 (ఫోన్‌పే / గూగుల్ పే)</span>
+    <div class="wa-note">
+      <span style="font-size:1.05rem;flex-shrink:0;">💬</span>
+      <div>
+        <span class="en">After sending your contribution, please <strong>WhatsApp your name and payment details to +91
+            99125 74449</strong> to receive your official receipt. 🙏</span>
+        <span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">విరాళం పంపిన తర్వాత, రసీదు పొందడానికి దయచేసి
+          <strong>మీ పేరు మరియు వివరాలను +91 99125 74449కి WhatsApp చేయండి</strong>. 🙏</span>
       </div>
     </div>
-  </div>
+    <p class="pay-note en">Credit / debit card and net banking options will be made available soon.</p>
+    <p class="pay-note te" style="font-family:'Noto Sans Telugu',sans-serif;">క్రెడిట్/డెబిట్ కార్డ్ మరియు నెట్
+      బ్యాంకింగ్ వివరాలు త్వరలో అందుబాటులో ఉంటాయి.</p>
 
-  <div class="wa-note">
-    <span style="font-size:1.05rem;flex-shrink:0;">💬</span>
-    <div>
-      <span class="en">After sending your contribution, please <strong>WhatsApp your name and payment details to +91 99125 74449</strong> to receive your official receipt. 🙏</span>
-      <span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">విరాళం పంపిన తర్వాత, రసీదు పొందడానికి దయచేసి <strong>మీ పేరు మరియు వివరాలను +91 99125 74449కి WhatsApp చేయండి</strong>. 🙏</span>
+    <div class="cta">
+      <p class="en">"Participate in the divine service of Lord Hanuman and achieve success in all your
+        endeavors.<br /><strong style="color:var(--sindoor-glow);font-style:normal;">You can also be behind this
+          construction — by lending your support, you become a part of something eternal.</strong>"</p>
+      <p class="te te-f">"శ్రీ హనుమంతుని దివ్య సేవలో పాల్గొని, మీ అన్ని కార్యాలలో విజయం సాధించండి.<br /><strong
+          style="color:var(--sindoor-glow);font-style:normal;">మీరు కూడా ఈ నిర్మాణంలో వెనక ఉండవచ్చు — మీ సహాయం అందించడం
+          ద్వారా శాశ్వతమైన ఏదైనా నిర్మించిన వారిలో భాగమవుతారు.</strong>"</p>
+      <p class="mantra">🚩 ఓం శ్రీ కార్యసిద్ధి హనుమతే నమః 🚩</p>
     </div>
-  </div>
-  <p class="pay-note en">Credit / debit card and net banking options will be made available soon.</p>
-  <p class="pay-note te" style="font-family:'Noto Sans Telugu',sans-serif;">క్రెడిట్/డెబిట్ కార్డ్ మరియు నెట్ బ్యాంకింగ్ వివరాలు త్వరలో అందుబాటులో ఉంటాయి.</p>
+  </section>
 
-  <div class="cta">
-    <p class="en">"Participate in the divine service of Lord Hanuman and achieve success in all your endeavors.<br/><strong style="color:var(--sindoor-glow);font-style:normal;">You can also be behind this construction — by lending your support, you become a part of something eternal.</strong>"</p>
-    <p class="te te-f">"శ్రీ హనుమంతుని దివ్య సేవలో పాల్గొని, మీ అన్ని కార్యాలలో విజయం సాధించండి.<br/><strong style="color:var(--sindoor-glow);font-style:normal;">మీరు కూడా ఈ నిర్మాణంలో వెనక ఉండవచ్చు — మీ సహాయం అందించడం ద్వారా శాశ్వతమైన ఏదైనా నిర్మించిన వారిలో భాగమవుతారు.</strong>"</p>
-    <p class="mantra">🚩 ఓం శ్రీ కార్యసిద్ధి హనుమతే నమః 🚩</p>
-  </div>
-</section>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="f-om">🕉️</div>
+    <div class="f-name en">Sree Karyasiddhi Hanuman Trust</div>
+    <div class="f-name te" style="font-family:'Noto Sans Telugu',sans-serif;">శ్రీ కార్యసిద్ధి హనుమాన్ ట్రస్ట్</div>
+    <div class="f-te en">శ్రీ కార్యసిద్ధి హనుమాన్ ఆలయం</div>
+    <div class="f-te te" style="font-family:'Noto Sans Telugu',sans-serif;">Sree Karyasiddhi Hanuman Temple</div>
+    <div class="f-addr en">Door No. 1-8/1, Ramalayam Street (near Government School),<br />Radhayapalem, Rajanagaram
+      Mandal,<br />East Godavari District, Andhra Pradesh &ndash; 533341</div>
+    <div class="f-addr te" style="font-family:'Noto Sans Telugu',sans-serif;">డోర్ నం. 1-8/1, రామాలయం స్ట్రీట్ (ప్రభుత్వ
+      పాఠశాల సమీపంలో),<br />రాధాయపాలెం, రాజానగరం మండలం,<br />తూర్పు గోదావరి జిల్లా, ఆంధ్ర ప్రదేశ్ &ndash; 533341</div>
+    <a href="tel:+919912574449" class="f-ph">📞 +91 99125 74449</a><br />
+    <a href="tel:+919154777788" class="f-ph2">+91 91547 77788</a>
+    <div class="lotus">&#10022; &#10047; &#10022;</div>
+    <p
+      style="font-family:'Crimson Pro',serif;font-style:italic;font-size:.88rem;color:var(--text-muted);margin-bottom:.45rem;">
+      "కార్యసిద్ధిం మే దేహి శరణాగత వత్సల"</p>
+    <p class="f-copy en">&#169; 2026 Sree Karyasiddhi Hanuman Trust, Radhayapalem. Built with devotion by the community.
+    </p>
+    <p class="f-copy te" style="font-family:'Noto Sans Telugu',sans-serif;">&#169; 2026 శ్రీ కార్యసిద్ధి హనుమాన్
+      ట్రస్ట్, రాధాయపాలెం. సమాజం భక్తితో నిర్మించింది.</p>
+  </footer>
 
-<!-- ===== FOOTER ===== -->
-<footer>
-  <div class="f-om">🕉️</div>
-  <div class="f-name en">Sree Karyasiddhi Hanuman Trust</div>
-  <div class="f-name te" style="font-family:'Noto Sans Telugu',sans-serif;">శ్రీ కార్యసిద్ధి హనుమాన్ ట్రస్ట్</div>
-  <div class="f-te en">శ్రీ కార్యసిద్ధి హనుమాన్ ఆలయం</div>
-  <div class="f-te te" style="font-family:'Noto Sans Telugu',sans-serif;">Sree Karyasiddhi Hanuman Temple</div>
-  <div class="f-addr en">Door No. 1-8/1, Ramalayam Street (near Government School),<br/>Radhayapalem, Rajanagaram Mandal,<br/>East Godavari District, Andhra Pradesh &ndash; 533341</div>
-  <div class="f-addr te" style="font-family:'Noto Sans Telugu',sans-serif;">డోర్ నం. 1-8/1, రామాలయం స్ట్రీట్ (ప్రభుత్వ పాఠశాల సమీపంలో),<br/>రాధాయపాలెం, రాజానగరం మండలం,<br/>తూర్పు గోదావరి జిల్లా, ఆంధ్ర ప్రదేశ్ &ndash; 533341</div>
-  <a href="tel:+919912574449" class="f-ph">📞 +91 99125 74449</a><br/>
-  <a href="tel:+919154777788" class="f-ph2">+91 91547 77788</a>
-  <div class="lotus">&#10022; &#10047; &#10022;</div>
-  <p style="font-family:'Crimson Pro',serif;font-style:italic;font-size:.88rem;color:var(--text-muted);margin-bottom:.45rem;">"కార్యసిద్ధిం మే దేహి శరణాగత వత్సల"</p>
-  <p class="f-copy en">&#169; 2026 Sree Karyasiddhi Hanuman Trust, Radhayapalem. Built with devotion by the community.</p>
-  <p class="f-copy te" style="font-family:'Noto Sans Telugu',sans-serif;">&#169; 2026 శ్రీ కార్యసిద్ధి హనుమాన్ ట్రస్ట్, రాధాయపాలెం. సమాజం భక్తితో నిర్మించింది.</p>
-</footer>
-
-<script>
-// ===== LANGUAGE POPUP =====
-function chooseLang(lang) {
-  const popup = document.getElementById('langPopup');
-  popup.classList.add('hidden');
-  if (lang === 'te') {
-    document.body.classList.add('lang-te');
-    // update scroll indicator text
-    document.querySelectorAll('.scroll-indicator-text.te').forEach(el => el.style.display = 'block');
-    document.querySelectorAll('.scroll-indicator-text.en').forEach(el => el.style.display = 'none');
-  }
-  // Note: we do NOT save to localStorage here — popup shows every time on load/refresh
-}
-
-// ===== LANGUAGE TOGGLE (nav button) =====
-function toggleLang() {
-  document.body.classList.toggle('lang-te');
-  try {
-    localStorage.setItem('sklang', document.body.classList.contains('lang-te') ? 'te' : 'en');
-  } catch(e) {}
-}
-
-// ===== LIGHTBOX =====
-function openLB(src, cap) {
-  document.getElementById('lb-img').src = src;
-  document.getElementById('lb-img').alt = cap;
-  document.getElementById('lb-cap').textContent = cap;
-  document.getElementById('lb').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeLB() {
-  document.getElementById('lb').classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
-
-// ===== SMOOTH SCROLL =====
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-  });
-});
-
-// ===== SCROLL ENTRANCE ANIMATIONS =====
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.opacity = '1';
-      e.target.style.transform = 'translateY(0)';
+  <script>
+    // ===== LANGUAGE POPUP =====
+    function chooseLang(lang) {
+      const popup = document.getElementById('langPopup');
+      popup.classList.add('hidden');
+      if (lang === 'te') {
+        document.body.classList.add('lang-te');
+        // update scroll indicator text
+        document.querySelectorAll('.scroll-indicator-text.te').forEach(el => el.style.display = 'block');
+        document.querySelectorAll('.scroll-indicator-text.en').forEach(el => el.style.display = 'none');
+      }
+      // Note: we do NOT save to localStorage here — popup shows every time on load/refresh
     }
-  });
-}, { threshold: .07, rootMargin: '0px 0px -28px 0px' });
 
-document.querySelectorAll('.tl-item,.attr,.bank-card,.upi-card,.founder-card,.gal-item,.cta').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(16px)';
-  el.style.transition = 'opacity .5s ease, transform .5s ease';
-  obs.observe(el);
-});
+    // ===== LANGUAGE TOGGLE (nav button) =====
+    function toggleLang() {
+      document.body.classList.toggle('lang-te');
+      try {
+        localStorage.setItem('sklang', document.body.classList.contains('lang-te') ? 'te' : 'en');
+      } catch (e) { }
+    }
 
-// ===== HIDE SCROLL INDICATOR AFTER FIRST SCROLL =====
-window.addEventListener('scroll', function hideScroll() {
-  const ind = document.querySelector('.scroll-indicator');
-  if (ind) {
-    ind.style.opacity = '0';
-    ind.style.transition = 'opacity 0.5s ease';
-    setTimeout(() => { if(ind) ind.style.display = 'none'; }, 500);
-  }
-  window.removeEventListener('scroll', hideScroll);
-}, { passive: true });
-</script>
+    // ===== LIGHTBOX =====
+    function openLB(src, cap) {
+      document.getElementById('lb-img').src = src;
+      document.getElementById('lb-img').alt = cap;
+      document.getElementById('lb-cap').textContent = cap;
+      document.getElementById('lb').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLB() {
+      document.getElementById('lb').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+
+    // ===== SCROLL ENTRANCE ANIMATIONS =====
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: .07, rootMargin: '0px 0px -28px 0px' });
+
+    document.querySelectorAll('.tl-item,.attr,.bank-card,.upi-card,.founder-card,.gal-item,.cta').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(16px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
+      obs.observe(el);
+    });
+
+    // ===== HIDE SCROLL INDICATOR AFTER FIRST SCROLL =====
+    window.addEventListener('scroll', function hideScroll() {
+      const ind = document.querySelector('.scroll-indicator');
+      if (ind) {
+        ind.style.opacity = '0';
+        ind.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => { if (ind) ind.style.display = 'none'; }, 500);
+      }
+      window.removeEventListener('scroll', hideScroll);
+    }, { passive: true });
+  </script>
 </body>
+
 </html>
