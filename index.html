@@ -1335,7 +1335,9 @@
       <button class="lang-btn" onclick="toggleLang()">
         <span class="en">తెలుగు</span><span class="te">English</span>
       </button>
-      <a href="#support" class="donate-btn">
+      <a href="upi://pay?pa=wwwreddy.padala3@ybl&pn=SreeKaryasiddhiHanumanTemple&tn=Temple%20Donation&cu=INR"
+        class="donate-btn"
+        onclick="if(!navigator.userAgent.match(/Android|iPhone|iPad/i)){event.preventDefault();document.getElementById('support').scrollIntoView({behavior:'smooth'});}">
         <span class="en">🙏 Donate</span><span class="te">🙏 విరాళం</span>
       </a>
     </div>
