@@ -1292,6 +1292,53 @@
     .copy-btn.copied{color:#9BE8B5;border-color:rgba(155,232,181,.5)}
     .map-btn{display:inline-flex;align-items:center;gap:.4rem;margin:0 0 1rem;padding:.55rem 1.1rem;border-radius:999px;background:rgba(255,140,60,.12);border:1px solid rgba(255,140,60,.4);color:var(--sindoor-glow);text-decoration:none;font-size:.85rem}
     .map-btn:hover{background:rgba(255,140,60,.22);color:var(--gold)}
+
+    /* ===== Visual refresh ===== */
+    .hero-bg img{animation:kenburns 22s ease-in-out infinite alternate;transform-origin:50% 30%}
+    @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.12) translateY(-1.5%)}}
+    .hero-bg::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 50% 35%,rgba(255,119,51,.22),transparent 60%);animation:glow 6s ease-in-out infinite alternate}
+    .hero-bg::after{z-index:2}
+    @keyframes glow{from{opacity:.55}to{opacity:1}}
+    .diya{display:inline-block;margin-right:.45rem;animation:flicker 2.4s ease-in-out infinite;filter:drop-shadow(0 0 6px rgba(255,170,60,.8))}
+    @keyframes flicker{0%,100%{transform:scale(1) rotate(-2deg);opacity:1}40%{transform:scale(1.08) rotate(2deg);opacity:.85}70%{transform:scale(.96);opacity:.95}}
+    .sep{height:28px;background:none;position:relative;display:flex;align-items:center;justify-content:center;max-width:720px;margin:0 auto}
+    .sep::before{content:'';position:absolute;left:8%;right:8%;top:50%;height:1px;background:linear-gradient(to right,transparent,var(--gold-deep),transparent);opacity:.55}
+    .sep::after{content:'✦ ❁ ✦';position:relative;padding:0 .8rem;background:var(--dark-base);color:var(--gold);font-size:.8rem;letter-spacing:.35em}
+    .timeline::before{opacity:.25}
+    .tl-fill{position:absolute;left:20px;top:0;width:2px;height:0;background:linear-gradient(to bottom,var(--sindoor),var(--gold));box-shadow:0 0 8px var(--shadow-gold);z-index:0;transition:height .15s linear}
+    .tl-item.current .tl-body{border-left:2px solid var(--gold);padding-left:.8rem}
+    .tl-dot.active::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--gold);animation:ring 1.8s ease-out infinite}
+    @keyframes ring{from{transform:scale(.85);opacity:.9}to{transform:scale(1.5);opacity:0}}
+    .tl-date .te{display:none}body.lang-te .tl-date .en{display:none}body.lang-te .tl-date .te{display:inline}
+    /* Donation section: light cream cards */
+    .support-sec .bank-card,.support-sec .upi-card{background:linear-gradient(160deg,#FFF8EC,#FBE9C9);border:1px solid #E8C48A;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .support-sec .bank-head{border-bottom-color:rgba(200,125,0,.25)}
+    .support-sec .bank-lbl{color:#B23E00}.support-sec .bank-sub{color:#5A3500}
+    .support-sec .bf{color:#8A6030}.support-sec .bv{color:#2A1600}.support-sec .bv.mono{color:#9A4A00}
+    .support-sec .upi-lbl,.support-sec .upi-lbl-te{color:#1E7A43}.support-sec .upi-id{color:#14532D;font-weight:700}
+    .support-sec .upi-card div[style*="6BCB8B"]{color:#2E7D4F!important}
+    .support-sec .copy-btn{color:#7A3B00;background:rgba(200,125,0,.12);border-color:rgba(160,90,0,.4)}
+    .support-sec .copy-btn.copied{color:#1E7A43;border-color:#1E7A43}
+    /* Gallery: swipe on phones */
+    @media (max-width:640px){
+      .gal-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.7rem;padding-bottom:.6rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+      .gal-grid::-webkit-scrollbar{display:none}
+      .gal-item,.gal-item.wide{flex:0 0 82%;scroll-snap-align:center}
+      .gal-item img,.gal-item.wide img{height:300px}
+    }
+    .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);border:1px solid rgba(245,166,35,.35);color:var(--gold);font-size:2.2rem;width:44px;height:44px;border-radius:50%;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center}
+    .lb-prev{left:.6rem}.lb-next{right:.6rem}
+    /* Sticky mobile donate bar */
+    .m-donate{display:none}
+    @media (max-width:768px){
+      .m-donate{display:flex;position:fixed;left:.8rem;right:.8rem;bottom:.8rem;z-index:900;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1rem;border-radius:999px;background:linear-gradient(135deg,#D94F00,#8A2D00);color:#fff;text-decoration:none;font-family:'Cinzel',serif;font-weight:700;font-size:.92rem;box-shadow:0 8px 26px rgba(217,79,0,.55);border:1px solid rgba(255,140,60,.45);transform:translateY(160%);transition:transform .35s ease}
+      .m-donate.show{transform:none}
+      body.lang-te .m-donate{font-family:'Noto Sans Telugu',sans-serif}
+      footer{padding-bottom:5.5rem}
+    }
+    @media (prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    }
   </style>
 </head>
 
@@ -1353,8 +1400,8 @@
   <section id="hero"
     style="padding:0;max-width:100%;min-height:100svh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;overflow:hidden;">
     <div class="hero-bg">
-      <img loading="lazy" decoding="async" src="images/hanuman-idol.webp"
-        alt="Lord Hanuman statue taking divine form — Sri Karyasiddhi Hanuman Temple, Radhayapalem" />
+      <img fetchpriority="high" decoding="async" src="images/hanuman-idol.webp"
+        alt="Lord Hanuman statue taking divine form — Sree Karyasiddhi Hanuman Temple, Radhayapalem" />
     </div>
     <div class="hero-content">
       <p class="hero-flag en">🚩 Jai Shree Ram 🚩</p>
@@ -1366,7 +1413,7 @@
         <span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">రాధాయపాలెంలో ఒక సమాజ స్వప్నం ఆవిర్భవిస్తోంది
           — ఇటుక ఇటుకగా, ప్రార్థన ప్రార్థనగా.</span>
       </p>
-      <div class="hero-mantra">
+      <div class="hero-mantra"><span class="diya" aria-hidden="true">🪔</span>
         <em>"కార్యసిద్ధిం మే దేహి శరణాగత వత్సల |<br />ఓం శ్రీ కార్యసిద్ధి హనుమతే నమః ||"</em>
       </div>
     </div>
@@ -1408,13 +1455,10 @@
         విశ్వాసంతో పెరిగిన నేల.</p>
       <div class="blockquote" style="font-family:'Noto Sans Telugu',sans-serif;">"ఈ ఆలయం ఒక్క వ్యక్తి చేతులతో కట్టలేదు —
         ప్రతి కుటుంబం యొక్క భక్తితో నిర్మించబడింది. ఇక్కడ ఇచ్చిన ప్రతి రూపాయి ఒక ప్రార్థన."</div>
-      <p>శ్రీ అంజనేయ స్వామి దివ్యాశీస్సులతో <strong style="color:var(--gold);">శ్రీ కార్యసిద్ధి హనుమాన్ ఆలయం</strong>
+      <p>శ్రీ ఆంజనేయ స్వామి దివ్యాశీస్సులతో <strong style="color:var(--gold);">శ్రీ కార్యసిద్ధి హనుమాన్ ఆలయం</strong>
         నిర్మాణం ప్రారంభమైంది. ప్రతి భక్తుడిని ఈ పవిత్ర యాత్రలో భాగస్వామి అవ్వమని ఆహ్వానిస్తున్నాం.</p>
     </div>
   </section>
-
-  <div class="imgband"><img loading="lazy" decoding="async" src="images/idol-scaffolding.webp"
-      alt="Scaffolding erected around the Hanuman idol construction site — the statue base taking shape" /></div>
   <div class="sep"></div>
 
   <!-- ===== HANUMAN ===== -->
@@ -1426,19 +1470,12 @@
     <h2 class="stitle-te te">శ్రీ హనుమంతుడు</h2>
 
     <div class="btext en">
-      <p>Lord Hanuman — son of Vayu, eternal servant of Lord Rama, destroyer of obstacles — is the most selfless and
-        fearless devotee Bharat has ever known.</p>
-      <p><em>Karyasiddhi</em> means "the one who grants success in all endeavors." His promise is timeless: <em>those
-          who surrender to him in faith will never fail.</em></p>
-      <p>This temple enshrines Lord Hanuman in his <strong style="color:var(--gold);">Karyasiddhi</strong> form — now
-        standing eternal over Radhayapalem.</p>
+      <p>Lord Hanuman, son of Vayu and eternal servant of Lord Rama, removes every obstacle.</p>
+      <p><em>Karyasiddhi</em> means "the one who grants success in all endeavors", the form this temple enshrines.</p>
     </div>
     <div class="btext te te-f">
       <p>శ్రీ హనుమంతుడు — వాయు పుత్రుడు, రాముని శాశ్వత సేవకుడు, విఘ్నాలను నాశనం చేసే దేవుడు.</p>
-      <p><em>కార్యసిద్ధి</em> — "అన్ని కార్యాలలో విజయం ప్రసాదించేవాడు." ఆయన మాట శాశ్వతమైనది: <em>విశ్వాసంతో శరణు
-          వేడుకున్నవారు ఎన్నడూ విఫలం కారు.</em></p>
-      <p>ఈ ఆలయం శ్రీ హనుమంతుని <strong style="color:var(--gold);">కార్యసిద్ధి</strong> రూపంలో ప్రతిష్ఠిస్తుంది —
-        రాధాయపాలెంపై శాశ్వతంగా నిలబడే మహా విగ్రహం.</p>
+      <p><em>కార్యసిద్ధి</em> — "అన్ని కార్యాలలో విజయం ప్రసాదించేవాడు." ఈ ఆలయం ఆ రూపాన్ని ప్రతిష్ఠిస్తుంది.</p>
     </div>
 
     <div class="attrs">
@@ -1508,7 +1545,7 @@
           calls Radhayapalem home, and most of all, to Anjaneya Swamy himself. I am only his instrument. By his grace,
           this will be completed, and generations will find peace here."</div>
         <div class="fquote-te te">"ఇది నా ఆలయం కాదు — ఇక్కడ ప్రార్థించే ప్రతి భక్తుడికి, రాధాయపాలెంను స్వంత ఊరుగా
-          భావించే ప్రతి కుటుంబానికి, అన్నింటికంటే ముందు అంజనేయ స్వామికే ఇది చెందుతుంది. నేను కేవలం ఆయన పనిముట్టును."
+          భావించే ప్రతి కుటుంబానికి, అన్నింటికంటే ముందు ఆంజనేయ స్వామికే ఇది చెందుతుంది. నేను కేవలం ఆయన పనిముట్టును."
         </div>
         <div class="fcontact">📞 <a href="tel:+919912574449">+91 99125 74449</a> &nbsp;|&nbsp; <a
             href="tel:+919154777788" style="color:var(--text-muted);">+91 91547 77788</a></div>
@@ -1535,7 +1572,7 @@
     <h2 class="stitle en">Construction Journey</h2>
     <h2 class="stitle-te te">నిర్మాణ పయనం</h2>
 
-    <div class="timeline">
+    <div class="timeline"><div class="tl-fill" id="tlFill"></div>
 
       <!-- Step 1: Bhoomi Puja -->
       <div class="tl-item">
@@ -1548,13 +1585,6 @@
             community gathered as the dream became a resolve.</div>
           <div class="tl-desc-te te">వేద మంత్రోచ్చారణలతో, పూలు మరియు కుంకుమతో పవిత్ర శంకుస్థాపన జరిగింది. కల సంకల్పంగా
             మారిన ఆ శుభ దినాన సమాజం సమావేశమైంది.</div>
-          <div class="tl-photo"
-            onclick="openLB('images/bhoomi-puja.webp','Bhoomi Puja — Sacred ground-breaking ceremony, May 8, 2026')">
-            <img src="images/bhoomi-puja.webp" alt="Bhoomi Puja May 2026"
-              loading="lazy" />
-            <div class="tl-cap en">Bhoomi Puja &middot; May 8, 2026 &middot; Radhayapalem</div>
-            <div class="tl-cap-te te">భూమి పూజ &middot; మే 8, 2026 &middot; రాధాయపాలెం</div>
-          </div>
         </div>
       </div>
 
@@ -1569,13 +1599,6 @@
             Hanuman idol and temple structure.</div>
           <div class="tl-desc-te te">పునాది తవ్వి పవిత్రం చేశారు. హనుమంతుని విగ్రహం మరియు ఆలయ నిర్మాణానికి కాంక్రీట్
             స్తంభాలు నాటబడ్డాయి.</div>
-          <div class="tl-photo"
-            onclick="openLB('images/foundation-ceremony.webp','Foundation consecration — prayers offered in the newly dug foundation pit')">
-            <img src="images/foundation-ceremony.webp" alt="Foundation consecration"
-              loading="lazy" />
-            <div class="tl-cap en">Foundation consecration &middot; June 2026</div>
-            <div class="tl-cap-te te">పునాది అభిషేకం &middot; జూన్ 2026</div>
-          </div>
         </div>
       </div>
 
@@ -1601,13 +1624,13 @@
       </div>
 
       <!-- Step 4: Current (idol detailing) -->
-      <div class="tl-item">
+      <div class="tl-item current">
         <div class="tl-dot active">⚡</div>
         <div class="tl-body">
-          <div class="tl-date">September 2026 — Current Stage</div>
+          <div class="tl-date"><span class="en">Current Stage</span><span class="te">ప్రస్తుత దశ</span></div>
           <div class="tl-ttl en">Idol Detailing &amp; Decorative Sculpture — In Progress</div>
           <div class="tl-ttl-te te">విగ్రహ వివరాల శిల్పకళ — జరుగుతోంది</div>
-          <div class="tl-desc en">The idol of Sri Karyasiddhi Hanuman is taking form. Master artisans are carving
+          <div class="tl-desc en">The idol of Sree Karyasiddhi Hanuman is taking form. Master artisans are carving
             intricate details — the Pushpaka Vimana scene, the entrance arch, and celestial figures.</div>
           <div class="tl-desc-te te">శ్రీ కార్యసిద్ధి హనుమంతుని విగ్రహం రూపుదిద్దుకుంటోంది. పుష్పక విమాన దృశ్యం, ఆలయ
             ప్రవేశ ద్వారం తయారవుతున్నాయి.</div>
@@ -1641,7 +1664,7 @@
     <h2 class="stitle en">Photo Gallery</h2>
     <h2 class="stitle-te te">ఫోటో గ్యాలరీ</h2>
     <div class="btext en" style="margin-bottom:.5rem;">
-      <p>Stone, labour, faith, and artistry — converging into something eternal. Tap any photo to enlarge.</p>
+      <p>Stone, labour, faith, and artistry — converging into something eternal. Tap a photo to enlarge.</p>
     </div>
     <div class="btext te te-f" style="margin-bottom:.5rem;">
       <p>రాయి, శ్రమ, విశ్వాసం మరియు కళాత్మకత — శాశ్వతమైన ఏదైనా నిర్మిస్తున్నాయి. ఫోటో నొక్కి పెద్దదిగా చూడండి.</p>
@@ -1649,17 +1672,11 @@
 
     <div class="gal-grid">
       <div class="gal-item wide"
-        onclick="openLB('images/hanuman-idol.webp','The divine form of Sri Karyasiddhi Hanuman taking shape through the construction scaffolding')">
-        <img src="images/hanuman-idol.webp" alt="Sri Karyasiddhi Hanuman idol taking shape" loading="lazy" />
-        <div class="gal-cap"><span class="en">Sri Karyasiddhi Hanuman — the idol taking divine form</span><span
+        onclick="openLB('images/hanuman-idol.webp','The divine form of Sree Karyasiddhi Hanuman taking shape through the construction scaffolding')">
+        <img src="images/hanuman-idol.webp" alt="Sree Karyasiddhi Hanuman idol taking shape" loading="lazy" />
+        <div class="gal-cap"><span class="en">Sree Karyasiddhi Hanuman — the idol taking divine form</span><span
             class="te" style="font-family:'Noto Sans Telugu',sans-serif;">శ్రీ కార్యసిద్ధి హనుమంతుడు — విగ్రహం దివ్య
             రూపం పొందుతోంది</span></div>
-      </div>
-      <div class="gal-item"
-        onclick="openLB('images/idol-scaffolding.webp','Scaffolding built around the Hanuman statue — craftsmen working on the idol base')">
-        <img src="images/idol-scaffolding.webp" alt="Scaffolding around the Hanuman idol construction" loading="lazy" />
-        <div class="gal-cap"><span class="en">Idol construction — scaffolding supports the craftsmen</span><span
-            class="te" style="font-family:'Noto Sans Telugu',sans-serif;">విగ్రహ నిర్మాణ మచ్చులు</span></div>
       </div>
       <div class="gal-item"
         onclick="openLB('images/pushpaka-vimana.webp','Divine Pushpaka Vimana scene — celestial figures sculpted for the temple')">
@@ -1667,30 +1684,19 @@
         <div class="gal-cap"><span class="en">Pushpaka Vimana — divine boat sculpture</span><span class="te"
             style="font-family:'Noto Sans Telugu',sans-serif;">దివ్య వాహన శిల్పం</span></div>
       </div>
-      <div class="gal-item wide"
+      <div class="gal-item"
         onclick="openLB('images/entrance-arch.webp','Temple entrance arch sculpted with celestial figures and elephants')">
         <img src="images/entrance-arch.webp" alt="Temple entrance arch" loading="lazy" />
         <div class="gal-cap"><span class="en">Ornate entrance arch — carved with divine figures</span><span class="te"
             style="font-family:'Noto Sans Telugu',sans-serif;">ఆలయ ప్రవేశ ద్వారం — దివ్య ఆకృతులతో</span></div>
       </div>
-      <div class="gal-item"
-        onclick="openLB('images/bhoomi-puja.webp','Bhoomi Puja ceremony — May 8, 2026')">
-        <img src="images/bhoomi-puja.webp" alt="Bhoomi Puja" loading="lazy" />
-        <div class="gal-cap"><span class="en">Bhoomi Puja &middot; May 8, 2026</span><span class="te"
-            style="font-family:'Noto Sans Telugu',sans-serif;">భూమి పూజ &middot; మే 8, 2026</span></div>
-      </div>
-      <div class="gal-item"
-        onclick="openLB('images/foundation-ceremony.webp','Foundation consecration — prayers at the foundation pit')">
-        <img src="images/foundation-ceremony.webp" alt="Foundation consecration"
-          loading="lazy" />
-        <div class="gal-cap"><span class="en">Foundation consecration</span><span class="te"
-            style="font-family:'Noto Sans Telugu',sans-serif;">పునాది అభిషేకం</span></div>
-      </div>
     </div>
   </section>
 
   <div class="lightbox lb" id="lb" onclick="closeLB()">
-    <button class="lb-x" onclick="closeLB()">&#x2715;</button>
+    <button class="lb-x" onclick="closeLB()" aria-label="Close">&#x2715;</button>
+    <button class="lb-nav lb-prev" onclick="event.stopPropagation();stepLB(-1)" aria-label="Previous">&#8249;</button>
+    <button class="lb-nav lb-next" onclick="event.stopPropagation();stepLB(1)" aria-label="Next">&#8250;</button>
     <img id="lb-img" src="" alt="" onclick="event.stopPropagation()" />
     <div class="lb-cap" id="lb-cap"></div>
   </div>
@@ -1699,7 +1705,7 @@
 
   <!-- ===== SUPPORT ===== -->
   <span class="anch" id="support"></span>
-  <section>
+  <section class="support-sec">
     <p class="slbl en">Support the Cause</p>
     <p class="slbl te" style="font-family:'Noto Sans Telugu',sans-serif;">సహాయం చేయండి</p>
     <h2 class="stitle en">Be a Part of This Temple</h2>
@@ -1710,16 +1716,10 @@
         institutional grants, but by the collective faith and generosity of devotees like you. Every contribution,
         however large or small, goes directly toward construction, the idol, and the eventual consecration of this
         sacred space.</p>
-      <p style="margin-top:.9em;"><strong style="color:var(--cream);">You too can be behind this construction</strong> —
-        by lending your support, you become one of the many hands that helped build this eternal home for Lord Hanuman
-        in Radhayapalem.</p>
     </div>
     <div class="btext te te-f" style="color:var(--text-soft);margin-bottom:1.9rem;">
       <p>ఈ ఆలయం పూర్తిగా <strong style="color:var(--cream);">సమాజం నిధులతో</strong> నిర్మించబడుతోంది — మీలాంటి భక్తుల
         సమిష్టి విశ్వాసం మరియు దానశీలత ద్వారా. ప్రతి విరాళం నేరుగా నిర్మాణం మరియు కుంభాభిషేకానికి వెళ్తుంది.</p>
-      <p style="margin-top:.9em;"><strong style="color:var(--cream);">మీరు కూడా ఈ నిర్మాణంలో వెనక ఉండవచ్చు</strong> — మీ
-        సహాయాన్ని అందించడం ద్వారా రాధాయపాలెంలో శ్రీ హనుమంతునికి ఈ శాశ్వత ఆలయం నిర్మించిన అనేక చేతులలో ఒకరు అవ్వవచ్చు.
-      </p>
     </div>
 
     <div class="bank-card">
@@ -1804,15 +1804,11 @@
       బ్యాంకింగ్ వివరాలు త్వరలో అందుబాటులో ఉంటాయి.</p>
 
     <div class="cta">
-      <p class="en">"Participate in the divine service of Lord Hanuman and achieve success in all your
-        endeavors.<br /><strong style="color:var(--sindoor-glow);font-style:normal;">You can also be behind this
-          construction — by lending your support, you become a part of something eternal.</strong>"</p>
-      <p class="te te-f">"శ్రీ హనుమంతుని దివ్య సేవలో పాల్గొని, మీ అన్ని కార్యాలలో విజయం సాధించండి.<br /><strong
-          style="color:var(--sindoor-glow);font-style:normal;">మీరు కూడా ఈ నిర్మాణంలో వెనక ఉండవచ్చు — మీ సహాయం అందించడం
-          ద్వారా శాశ్వతమైన ఏదైనా నిర్మించిన వారిలో భాగమవుతారు.</strong>"</p>
       <p class="mantra">🚩 ఓం శ్రీ కార్యసిద్ధి హనుమతే నమః 🚩</p>
     </div>
   </section>
+
+  <a href="#support" class="m-donate" id="mDonate"><span>🙏</span><span class="en">Donate to the Temple</span><span class="te">ఆలయానికి విరాళం ఇవ్వండి</span></a>
 
   <!-- ===== FOOTER ===== -->
   <footer>
@@ -1915,6 +1911,30 @@
     if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(v).then(done,function(){fb()})}else{fb()}
     function fb(){var t=document.createElement('textarea');t.value=v;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();try{document.execCommand('copy')}catch(e){}document.body.removeChild(t);done()}}
   </script>
+<script>
+  // Lightbox prev/next + swipe
+  (function(){
+    var items=[].slice.call(document.querySelectorAll('.gal-item,.tl-photo')).map(function(el){var m=(el.getAttribute('onclick')||'').match(/openLB\('([^']+)','([^']*)'\)/);return m?[m[1],m[2]]:null}).filter(Boolean);
+    var idx=0,_open=window.openLB;
+    window.openLB=function(s,c){idx=Math.max(0,items.findIndex(function(i){return i[0]===s}));_open(s,c)};
+    window.stepLB=function(d){if(!items.length)return;idx=(idx+d+items.length)%items.length;_open(items[idx][0],items[idx][1])};
+    document.addEventListener('keydown',function(e){if(!document.getElementById('lb').classList.contains('open'))return;if(e.key==='ArrowRight')stepLB(1);if(e.key==='ArrowLeft')stepLB(-1)});
+    var x0=null,lb=document.getElementById('lb');
+    lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+    lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>45)stepLB(dx<0?1:-1);x0=null},{passive:true});
+  })();
+  // Timeline fill + sticky donate bar
+  (function(){
+    var tl=document.querySelector('.timeline'),fill=document.getElementById('tlFill'),bar=document.getElementById('mDonate'),sup=document.getElementById('support');
+    function onScroll(){
+      if(tl&&fill){var r=tl.getBoundingClientRect(),vh=window.innerHeight,p=(vh*0.6-r.top)/r.height;p=Math.max(0,Math.min(1,p));fill.style.height=(p*r.height)+'px'}
+      if(bar){var past=window.scrollY>window.innerHeight*0.8,atSup=false;if(sup){var s=sup.nextElementSibling||sup;var rs=s.getBoundingClientRect();atSup=rs.top<window.innerHeight&&rs.bottom>0}bar.classList.toggle('show',past&&!atSup)}
+    }
+    window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',onScroll);onScroll();
+  })();
+  // Staggered reveal for virtue cards
+  document.querySelectorAll('.attr').forEach(function(el,i){el.style.transitionDelay=(i*0.12)+'s'});
+</script>
 </body>
 
 </html>
