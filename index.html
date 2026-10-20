@@ -14,23 +14,23 @@
     rel="stylesheet" />
   <style>
     :root {
-      --sindoor: #E65C00;
-      --sindoor-light: #F07A2A;
-      --sindoor-glow: #B84300;
-      --gold: #8A5F00;
-      --gold-deep: #C9961A;
-      --gold-pale: #7A1F1F;
-      --cream: #7A1F1F;
-      --cream-dim: #FFF7E8;
-      --dark-base: #FFF7E8;
-      --dark-card: #FFFFFF;
-      --dark-panel: #F7E6C8;
-      --dark-border: #E8CFA0;
-      --text-main: #3A2412;
-      --text-soft: #5C3A1E;
-      --text-muted: #7A5A35;
-      --shadow-warm: rgba(230, 92, 0, 0.25);
-      --shadow-gold: rgba(201, 150, 26, 0.3);
+      --sindoor: #D94F00;
+      --sindoor-light: #F06522;
+      --sindoor-glow: #FF7733;
+      --gold: #F5A623;
+      --gold-deep: #C87D00;
+      --gold-pale: #FFE4A0;
+      --cream: #FDF0DC;
+      --cream-dim: #E8D5B0;
+      --dark-base: #0D0600;
+      --dark-card: #1A0B00;
+      --dark-panel: #120800;
+      --dark-border: #3A1F00;
+      --text-main: #F2E0C0;
+      --text-soft: #C8A870;
+      --text-muted: #B08A5A;
+      --shadow-warm: rgba(217, 79, 0, 0.35);
+      --shadow-gold: rgba(245, 166, 35, 0.25);
       --r-sm: 8px;
       --r-md: 16px;
       --r-lg: 24px;
@@ -1340,51 +1340,7 @@
       *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
     }
 
-    /* ===== Morning temple (light theme) ===== */
-    #hero,.lang-popup-overlay,.lb{--sindoor:#D94F00;--sindoor-glow:#FF7733;--gold:#F5A623;--gold-deep:#C87D00;--gold-pale:#FFE4A0;--cream:#FDF0DC;--cream-dim:#E8D5B0;--text-main:#F2E0C0;--text-soft:#C8A870;--text-muted:#B08A5A;--dark-base:#0D0600;--dark-border:#3A1F00}
-    #hero{background:#0D0600}
-    #hero + .sep{height:60px;max-width:none;background:linear-gradient(to bottom,#0D0600,#FFF7E8)}
-    #hero + .sep::before,#hero + .sep::after{display:none}
-    .stitle{color:#7A1F1F}
-    .stitle-te,.hero-title-te,.fname-te,.tl-ttl-te,.aname-te,.lang-popup-title.te{font-family:'Ramabhadra','Noto Sans Telugu',sans-serif!important;font-weight:400!important;letter-spacing:.01em}
-    .stitle-te{color:#7A1F1F}
-    .slbl{color:#B84300}
-    nav{background:rgba(255,247,232,.92);border-bottom:1px solid #E8CFA0;box-shadow:0 2px 14px rgba(122,31,31,.08)}
-    nav .nav-brand,nav .nav-brand *{color:#7A1F1F}
-    .sep::after{background:var(--dark-base);color:#C9961A}
-    .sep::before{background:linear-gradient(to right,transparent,#C9961A,transparent)}
-    .attr{background:#FFFFFF;border-color:#E8CFA0;box-shadow:0 4px 16px rgba(122,31,31,.06)}
-    .blockquote{background:rgba(230,92,0,.06)}
-    .founder-card{background:#FFFFFF;border-color:#E8CFA0;box-shadow:0 8px 26px rgba(122,31,31,.08)}
-    .fname{color:#7A1F1F}
-    .tl-dot.upcoming{background:#FFF;border-color:#C9961A}
-    .tl-dot.active{background:linear-gradient(135deg,#E8B030,#C9961A)}
-    .tl-dot.active::after{border-color:#C9961A}
-    .tl-item.current .tl-body{border-left-color:#C9961A}
-    .tl-fill{background:linear-gradient(to bottom,#E65C00,#C9961A)}
-    .tl-ttl{color:#7A1F1F}
-    .tl-cap,.tl-cap-te{background:#FFF1DA;color:#5C3A1E}
-    .gal-item{background:#FFF;box-shadow:0 4px 16px rgba(122,31,31,.08)}
-    .gal-cap{color:#FFF7E8}
-    .bank-card,.support-sec .bank-card,.support-sec .upi-card{background:#FFFFFF;border:1px solid #E8CFA0;box-shadow:0 8px 24px rgba(122,31,31,.08)}
-    .support-sec .upi-card{border-color:rgba(30,122,67,.35);background:linear-gradient(160deg,#FFFFFF,#F1FAF3)}
-    .wa-note{background:rgba(30,122,67,.07);border-color:rgba(30,122,67,.3);color:#1E5E38}
-    .cta{background:rgba(230,92,0,.06);border-color:rgba(201,150,26,.45)}
-    .cta .mantra{color:#7A1F1F}
-    .map-btn{background:rgba(230,92,0,.08);border-color:rgba(230,92,0,.4);color:#B84300}
-    .map-btn:hover{background:rgba(230,92,0,.16);color:#7A1F1F}
-    .copy-btn{color:#7A3B00;background:rgba(201,150,26,.12);border-color:rgba(160,110,0,.45)}
-    .copy-btn.copied{color:#1E7A43;border-color:#1E7A43}
-    footer{background:#7A1F1F;border-top:3px solid #C9961A;--text-muted:#F2D9B8;--text-soft:#F7E6C8;--gold:#F5C04A;--sindoor-glow:#FFB27A}
-    footer .f-name,footer .f-te{color:#FFE4A0}
-    footer .map-btn{background:rgba(255,255,255,.1);border-color:rgba(255,228,160,.5);color:#FFE4A0}
-    footer .lotus{color:#F5C04A}
-    .lang-popup-overlay{background:rgba(255,247,232,.94)}
-    .lang-popup-box{background:linear-gradient(160deg,#FFFFFF,#FFF1DA);border-color:#E8CFA0;box-shadow:0 20px 60px rgba(122,31,31,.18);--text-main:#3A2412;--text-soft:#5C3A1E;--text-muted:#7A5A35;--gold:#8A5F00;--gold-pale:#7A1F1F;--cream:#7A1F1F;--sindoor-glow:#B84300}
-    .lang-popup-btn.telugu{background:#FFF;color:#7A1F1F;border-color:#C9961A}
-    .lang-popup-btn.telugu:hover{background:#FFF1DA}
-    .lang-popup-box [style*="9BE8B5"]{color:#1E7A43!important}
-    .lang-popup-box [style*="gold-pale"]{color:#5C3A1E!important}
+    .stitle-te,.hero-title-te,.fname-te,.tl-ttl-te,.aname-te{font-family:'Ramabhadra','Noto Sans Telugu',sans-serif!important;font-weight:400!important;letter-spacing:.01em}
   </style>
 </head>
 
