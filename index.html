@@ -1156,6 +1156,17 @@
     @media (max-width:480px){.amt-grid{grid-template-columns:repeat(2,1fr)}}
     @media (prefers-reduced-motion:reduce){.amt-chip{transition:none}.amt-chip:hover{transform:none}}
 
+    /* Shine on donate buttons */
+    .donate-btn,.m-donate,.amt-chip:not(.amt-other){position:relative;overflow:hidden}
+    .m-donate{position:fixed}
+    .donate-btn::after,.m-donate::after,.amt-chip:not(.amt-other)::after{content:"";position:absolute;top:0;left:-75%;width:50%;height:100%;background:linear-gradient(110deg,transparent,rgba(255,235,180,.55),transparent);transform:skewX(-20deg);animation:btnShine 5s ease-in-out infinite;pointer-events:none}
+    .amt-chip:nth-child(2)::after{animation-delay:.25s}.amt-chip:nth-child(3)::after{animation-delay:.5s}
+    @keyframes btnShine{0%,78%{left:-75%}100%{left:130%}}
+    /* Flower petal shower */
+    .petal{position:fixed;top:-30px;z-index:9999;pointer-events:none;border-radius:60% 0 60% 0;opacity:.95;animation:petalFall linear forwards}
+    @keyframes petalFall{0%{transform:translate(0,0) rotate(0)}100%{transform:translate(var(--dx),105vh) rotate(var(--rot));opacity:.7}}
+    @media (prefers-reduced-motion:reduce){.donate-btn::after,.m-donate::after,.amt-chip::after{animation:none;display:none}.petal{display:none}}
+
     .wa-note {
       margin-top: .95rem;
       padding: .75rem .95rem;
@@ -1981,11 +1992,29 @@
   // Staggered reveal for virtue cards
   document.querySelectorAll('.attr').forEach(function(el,i){el.style.transitionDelay=(i*0.12)+'s'});
 
+    function petalShower(){
+      if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+      var cols=['#FF9F1C','#FFB627','#F77F00','#E85D04','#FFD166','#D62828'];
+      for(var i=0;i<28;i++){
+        var p=document.createElement('span');p.className='petal';
+        var sz=8+Math.random()*10;
+        p.style.width=sz+'px';p.style.height=sz*1.3+'px';
+        p.style.left=Math.random()*100+'vw';
+        p.style.background=cols[i%cols.length];
+        p.style.setProperty('--dx',(Math.random()*160-80)+'px');
+        p.style.setProperty('--rot',(Math.random()*720-360)+'deg');
+        var d=2.6+Math.random()*1.8;
+        p.style.animationDuration=d+'s';p.style.animationDelay=(Math.random()*.6)+'s';
+        document.body.appendChild(p);
+        setTimeout(function(el){el.remove()},(d+.8)*1000,p);
+      }
+    }
     function upiTap(e){
+      petalShower();
       if(!/Android|iPhone|iPad/i.test(navigator.userAgent)){
         e.preventDefault();
         var te=document.documentElement.classList.contains('lang-te')||document.body.classList.contains('lang-te');
-        alert(te?'UPI ద్వారా చెల్లించడానికి దయచేసి ఈ పేజీని మీ మొబైల్ ఫోన్‌లో తెరవండి.':'Please open this page on your mobile phone to pay via UPI.');
+        setTimeout(function(){alert(te?'UPI ద్వారా చెల్లించడానికి దయచేసి ఈ పేజీని మీ మొబైల్ ఫోన్‌లో తెరవండి.':'Please open this page on your mobile phone to pay via UPI.')},900);
         return false;
       }
       return true;
