@@ -1391,6 +1391,10 @@
     }
 
     .stitle-te,.hero-title-te,.fname-te,.tl-ttl-te,.aname-te{font-family:'Ramabhadra','Noto Sans Telugu',sans-serif!important;font-weight:400!important;letter-spacing:.01em}
+    /* Telugu typography fixes: letter-spacing breaks Telugu letters apart */
+    .te,.te *,[class$="-te"],[class$="-te"] *{letter-spacing:0!important;text-transform:none!important}
+    .slbl.te{font-family:'Noto Sans Telugu',sans-serif!important;font-size:.9rem;font-weight:600;line-height:1.5;margin-bottom:.3rem}
+    .stitle-te{font-size:clamp(1.4rem,5vw,2rem)!important;line-height:1.45;margin-bottom:1.5rem}
   </style>
 </head>
 
