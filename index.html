@@ -176,7 +176,7 @@
       border-radius: 14px;
       padding: 1.1rem 0.8rem;
       cursor: pointer;
-      transition: all 0.25s ease;
+      transition: transform 0.2s cubic-bezier(.23,1,.32,1), box-shadow 0.2s ease, background 0.2s ease;
       font-weight: 600;
     }
 
@@ -212,7 +212,7 @@
 
     .lang-popup-btn-label {
       display: block;
-      font-size: 0.65rem;
+      font-size:0.74rem;
       opacity: 0.7;
       margin-top: 0.2rem;
       font-family: 'Crimson Pro', serif;
@@ -316,11 +316,11 @@
       border: 1px solid var(--sindoor);
       color: var(--sindoor-glow);
       font-family: 'Noto Sans Telugu', 'Cinzel', sans-serif;
-      font-size: .74rem;
+      font-size:0.78rem;
       padding: .32rem .68rem;
       border-radius: 20px;
       cursor: pointer;
-      transition: all .25s
+      transition: transform .2s cubic-bezier(.23,1,.32,1), background-color .2s, color .2s, border-color .2s
     }
 
     .lang-btn:hover {
@@ -480,12 +480,12 @@
       align-items: center;
       gap: 0.4rem;
       cursor: pointer;
-      animation: scrollBounce 1.6s ease-in-out infinite;
+      animation: scrollBounce 2.4s cubic-bezier(.23,1,.32,1) infinite;
     }
 
     .scroll-indicator-text {
       font-family: 'Cinzel', serif;
-      font-size: 0.6rem;
+      font-size:0.74rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: rgba(245, 166, 35, 0.75);
@@ -589,7 +589,7 @@
 
     .slbl {
       font-family: 'Cinzel', serif;
-      font-size: .67rem;
+      font-size:0.78rem;
       font-weight: 600;
       letter-spacing: .24em;
       text-transform: uppercase;
@@ -706,7 +706,7 @@
 
     .adesc-te {
       font-family: 'Noto Sans Telugu', sans-serif;
-      font-size: .73rem;
+      font-size:0.78rem;
       color: var(--text-soft);
       line-height: 1.55
     }
@@ -860,7 +860,7 @@
 
     .tl-date {
       font-family: 'Cinzel', serif;
-      font-size: .68rem;
+      font-size:0.78rem;
       letter-spacing: .11em;
       color: var(--sindoor-glow);
       text-transform: uppercase;
@@ -917,7 +917,7 @@
     .tl-cap {
       background: rgba(26, 11, 0, .8);
       padding: .42rem .68rem;
-      font-size: .7rem;
+      font-size:0.78rem;
       color: var(--text-muted);
       font-style: italic
     }
@@ -926,7 +926,7 @@
       font-family: 'Noto Sans Telugu', sans-serif;
       background: rgba(26, 11, 0, .8);
       padding: .42rem .68rem;
-      font-size: .68rem;
+      font-size:0.78rem;
       color: var(--text-muted);
       font-style: italic
     }
@@ -976,7 +976,7 @@
       right: 0;
       background: linear-gradient(to top, rgba(13, 6, 0, .95) 0%, transparent 100%);
       padding: 1.4rem .72rem .55rem;
-      font-size: .7rem;
+      font-size:0.78rem;
       color: var(--cream-dim);
       font-style: italic
     }
@@ -1056,7 +1056,7 @@
 
     .bank-lbl {
       font-family: 'Cinzel', serif;
-      font-size: .73rem;
+      font-size:0.78rem;
       letter-spacing: .11em;
       color: var(--sindoor-glow);
       text-transform: uppercase
@@ -1082,7 +1082,7 @@
     }
 
     .bf {
-      font-size: .72rem;
+      font-size:0.78rem;
       color: var(--text-muted);
       flex-shrink: 0;
       min-width: 100px;
@@ -1121,7 +1121,7 @@
 
     .upi-lbl {
       font-family: 'Cinzel', serif;
-      font-size: .69rem;
+      font-size:0.78rem;
       letter-spacing: .11em;
       color: #6BCB8B;
       text-transform: uppercase;
@@ -1130,7 +1130,7 @@
 
     .upi-lbl-te {
       font-family: 'Noto Sans Telugu', sans-serif;
-      font-size: .68rem;
+      font-size:0.78rem;
       color: #6BCB8B;
       margin-bottom: .18rem
     }
@@ -1150,7 +1150,7 @@
     .amt-chip:hover,.amt-chip:focus-visible{transform:translateY(-2px);box-shadow:0 10px 28px rgba(217,79,0,.55)}
     .amt-val{font-family:'Cinzel',serif;font-weight:700;font-size:1.1rem;letter-spacing:.02em}
     .amt-val.te{font-family:'Ramabhadra','Noto Sans Telugu',sans-serif}
-    .amt-chip small{font-size:.68rem;opacity:.8;margin-top:.1rem}
+    .amt-chip small{font-size:0.78rem;opacity:.8;margin-top:.1rem}
     .amt-chip small.te{font-family:'Noto Sans Telugu',sans-serif}
     .amt-other{background:transparent;color:var(--gold,#E8B04B);border:1.5px dashed rgba(232,176,75,.6);box-shadow:none}
     @media (max-width:480px){.amt-grid{grid-template-columns:repeat(2,1fr)}}
@@ -1174,7 +1174,7 @@
     .use-ico{font-size:1.5rem}
     .use-item b{color:var(--cream);font-size:.92rem;font-weight:700}
     .use-item b.te,.use-item small.te{font-family:'Noto Sans Telugu',sans-serif}
-    .use-item small{font-size:.74rem;color:var(--text-soft)}
+    .use-item small{font-size:0.78rem;color:var(--text-soft)}
     @media (max-width:640px){.use-grid{grid-template-columns:repeat(2,1fr)}}
 
     .wa-note {
@@ -1301,7 +1301,7 @@
     }
 
     .f-copy {
-      font-size: .66rem;
+      font-size:0.78rem;
       color: var(--text-muted);
       opacity: .58;
       margin-top: 1.3rem
@@ -1337,7 +1337,7 @@
       }
     }
 
-    .copy-btn{display:inline-block;margin-left:.45rem;padding:.12rem .55rem;font-size:.68rem;font-family:inherit;letter-spacing:.03em;color:var(--gold);background:rgba(255,200,80,.08);border:1px solid rgba(255,200,80,.35);border-radius:999px;cursor:pointer;vertical-align:middle;transition:background .2s}
+    .copy-btn{display:inline-block;margin-left:.45rem;padding:.35rem .8rem;min-height:32px;font-size:0.78rem;font-family:inherit;letter-spacing:.03em;color:var(--gold);background:rgba(255,200,80,.08);border:1px solid rgba(255,200,80,.35);border-radius:999px;cursor:pointer;vertical-align:middle;transition:background .2s}
     .copy-btn:hover{background:rgba(255,200,80,.2)}
     .copy-btn.copied{color:#9BE8B5;border-color:rgba(155,232,181,.5)}
     .map-btn{display:inline-flex;align-items:center;gap:.4rem;margin:0 0 1rem;padding:.55rem 1.1rem;border-radius:999px;background:rgba(255,140,60,.12);border:1px solid rgba(255,140,60,.4);color:var(--sindoor-glow);text-decoration:none;font-size:.85rem}
@@ -1365,10 +1365,10 @@
     .support-sec .bank-head{border-bottom-color:rgba(200,125,0,.25)}
     .support-sec .bank-lbl{color:#B23E00}.support-sec .bank-sub{color:#5A3500}
     .support-sec .bf{color:#8A6030}.support-sec .bv{color:#2A1600}.support-sec .bv.mono{color:#9A4A00}
-    .support-sec .upi-lbl,.support-sec .upi-lbl-te{color:#1E7A43}.support-sec .upi-id{color:#14532D;font-weight:700}
+    .support-sec .upi-lbl,.support-sec .upi-lbl-te{color:#17643A}.support-sec .upi-id{color:#14532D;font-weight:700}
     .support-sec .upi-card div[style*="6BCB8B"]{color:#2E7D4F!important}
     .support-sec .copy-btn{color:#7A3B00;background:rgba(200,125,0,.12);border-color:rgba(160,90,0,.4)}
-    .support-sec .copy-btn.copied{color:#1E7A43;border-color:#1E7A43}
+    .support-sec .copy-btn.copied{color:#17643A;border-color:#17643A}
     /* Gallery: swipe on phones */
     @media (max-width:640px){
       .gal-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.7rem;padding-bottom:.6rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
@@ -1395,6 +1395,9 @@
     .te,.te *,[class$="-te"],[class$="-te"] *{letter-spacing:0!important;text-transform:none!important}
     .slbl.te{font-family:'Noto Sans Telugu',sans-serif!important;font-size:.9rem;font-weight:600;line-height:1.5;margin-bottom:.3rem}
     .stitle-te{font-size:clamp(1.4rem,5vw,2rem)!important;line-height:1.45;margin-bottom:1.5rem}
+    /* press feedback */
+    .amt-chip:active,.donate-btn:active,.m-donate:active,.copy-btn:active,.lang-popup-btn:active{transform:scale(.97)}
+    @media (hover:none){.amt-chip:hover{transform:none}}
   </style>
 </head>
 
@@ -1412,7 +1415,7 @@
         style="margin:1rem 0 0.2rem;padding:.75rem 1rem;background:rgba(217,79,0,.1);border:1px solid rgba(217,79,0,.3);border-radius:12px;font-size:.78rem;line-height:1.6;color:var(--gold-pale);">
         📳 <strong style="color:var(--sindoor-glow);">Support this temple</strong> &mdash; donate via UPI or bank
         transfer.<br />
-        <span style="font-size:.72rem;color:var(--text-soft);">UPI: <strong
+        <span style="font-size:0.78rem;color:var(--text-soft);">UPI: <strong
             style="font-family:'Courier New',monospace;color:#9BE8B5;">wwwreddy.padala3@ybl</strong> &nbsp;|&nbsp; Ph:
           9912574449</span>
       </div>
@@ -1778,7 +1781,7 @@
     <button class="lb-x" onclick="closeLB()" aria-label="Close">&#x2715;</button>
     <button class="lb-nav lb-prev" onclick="event.stopPropagation();stepLB(-1)" aria-label="Previous">&#8249;</button>
     <button class="lb-nav lb-next" onclick="event.stopPropagation();stepLB(1)" aria-label="Next">&#8250;</button>
-    <img id="lb-img" src="" alt="" onclick="event.stopPropagation()" />
+    <img id="lb-img" alt="" onclick="event.stopPropagation()" />
     <div class="lb-cap" id="lb-cap"></div>
   </div>
 
@@ -1853,7 +1856,7 @@
         <div class="upi-lbl en">PhonePe / GPay / Any UPI</div>
         <div class="upi-lbl-te te">ఫోన్‌పే / గూగుల్ పే / UPI</div>
         <div class="upi-id">wwwreddy.padala3@ybl <button type="button" class="copy-btn" onclick="copyText('wwwreddy.padala3@ybl',this)" aria-label="Copy UPI ID"><span class="en">Copy</span><span class="te">కాపీ</span></button></div>
-        <div style="margin-top:.28rem;font-size:.72rem;color:#6BCB8B;">
+        <div style="margin-top:.28rem;font-size:0.78rem;color:#6BCB8B;">
           <span class="en">Also pay directly to: 9912574449 (PhonePe / GPay)</span>
           <span class="te" style="font-family:'Noto Sans Telugu',sans-serif;">నేరుగా: 9912574449 (ఫోన్‌పే / గూగుల్
             పే)</span>
