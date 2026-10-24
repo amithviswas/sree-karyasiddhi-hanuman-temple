@@ -181,23 +181,66 @@
     }
 
     /* phone */
+    .m-photo,.dock{display:none}
     @media (max-width:860px){
       .navlinks{display:none}
-      .stage{display:flex;flex-direction:column;padding:0}
-      .photo{order:-1;position:relative;top:auto;height:58svh;margin:0 12px}
-      .read{padding:40px 20px 0}
-      .hero{min-height:auto;padding-bottom:24px}
-      .hero h1{font-size:clamp(2.5rem,10.5vw,4rem)}
-      .meaning ul,.supports{grid-template-columns:1fr}
-      .donate{display:block;min-height:auto;background:var(--ink)}
-      .donate>img{position:relative;height:70svh}
-      .donate .copy{padding:40px 20px 56px}
-      .upi .top{grid-template-columns:1fr}
-      .upi .id{font-size:clamp(1.75rem,9.2vw,3.5rem)}
+      .bar{padding:10px 16px}
+      .bar .btn.small{display:none}
+      .lang{background:var(--paper);text-decoration:none;padding:0 14px;min-height:40px}
+      .stage{display:block;padding:0}
+      .photo{display:none}
+      .read{padding:8px 16px 0}
+      .hero{min-height:auto;padding:16px 0 8px;justify-content:flex-start}
+      .hero h1{font-size:clamp(2.25rem,10vw,3.25rem);max-width:none}
+      .m-photo{display:block;margin:20px -4px 0;position:relative}
+      .m-photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+      .m-photo figcaption{display:flex;justify-content:space-between;padding:10px 14px;background:var(--paper);font-size:var(--step-small)}
+      .hero .lead{margin:20px 0 20px}
+      .hero .btn{width:100%}
+      .hero .meta{margin-top:20px}
+      .chapter{padding-top:72px}
+      .chapter h2{margin-bottom:20px}
+      .meaning{padding:24px 20px;margin-top:32px}
+      .meaning ul,.supports{grid-template-columns:1fr 1fr;gap:14px 16px}
+      .letter{padding:28px 20px 40px}
+      .slip{padding:24px 16px 0}
+      .slip .now{margin:24px -16px 0;padding:14px 16px 32px}
+      .row{flex-wrap:wrap}
+      .row .what{flex:1 1 60%}
+      .gallery{padding-top:80px}
+      .track figure{scroll-snap-align:center}
+      .gallery header{padding:0 16px;margin-bottom:20px}
+      .track{height:auto;gap:8px;padding:0 16px;scroll-snap-type:x mandatory}
+      .track figure{height:62vh;max-height:520px}
+      .track .tall{width:78vw;aspect-ratio:auto}
+      .track .wide{width:88vw;aspect-ratio:auto}
+      .track .pair{width:78vw}
+      .donate{display:block;min-height:auto;margin-top:80px;background:var(--ink)}
+      .donate>img{position:relative;height:auto;aspect-ratio:4/3;filter:none}
+      .donate .copy{padding:32px 16px 40px}
+      .amounts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+      .amounts .btn{min-height:56px;width:100%}
+      .upi{min-height:auto;padding:48px 16px 40px;gap:32px;grid-template-rows:auto}
+      .upi .top{grid-template-columns:1fr;gap:28px}
+      .upi .id{font-size:clamp(1.6rem,8.6vw,3rem)}
       .upi .id .at{display:block}
-      .track{height:62svh;gap:8px;padding:0 20px}
-      .track .pair{width:64vw}
+      .bank th{padding-right:10px}
+      .bank td{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+      .bank button{min-height:40px;padding:0 14px;margin-left:0}
+      .upi .bottom{flex-direction:column;gap:16px}
+      .wa{display:flex !important}
+      footer{min-height:auto}
+      footer>img{object-position:50% 25%}
+      footer .top{flex-direction:column;gap:20px;padding:32px 16px 0}
+      footer .name{padding:120px 16px 96px}
+      footer .name b{font-size:clamp(2.5rem,14vw,5.5rem)}
+      /* donate always within thumb reach */
+      .dock{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30;transition:transform 240ms var(--ease-out),opacity 240ms var(--ease-out)}
+      .dock .btn{flex:1;min-height:54px}
+      .dock.hide{transform:translateY(140%);opacity:0;pointer-events:none}
     }
+    .wa{display:none;align-items:center;justify-content:center;min-height:50px;background:var(--bg);color:var(--ink);font-weight:600;text-decoration:none;transition:transform 160ms var(--ease-out)}
+    .wa:active{transform:scale(.97)}
   </style>
 </head>
 <body class="no-js">
@@ -219,6 +262,7 @@
       <div class="read">
         <section class="hero" data-photo="0">
           <h1 class="rise"><span class="en">Sree Karyasiddhi Hanuman Temple</span><span class="te">శ్రీ కార్యసిద్ధి హనుమాన్ ఆలయం</span></h1>
+          <figure class="m-photo"><img src="images/hanuman-idol.webp" width="720" height="960" alt="The standing Hanuman idol inside bamboo scaffolding" /><figcaption><span><span class="en">The idol in its scaffolding</span><span class="te">మచ్చుల మధ్య విగ్రహం</span></span><span><span class="en">Radhayapalem</span><span class="te">రాధాయపాలెం</span></span></figcaption></figure>
           <p class="lead rise" style="--d:80ms"><span class="en">A standing Hanuman is rising in Radhayapalem, brick by brick, prayer by prayer. Help keep his daily puja going.</span><span class="te">రాధాయపాలెంలో హనుమంతుని నిలువెత్తు విగ్రహం రూపుదిద్దుకుంటోంది, ఇటుక ఇటుకగా, ప్రార్థన ప్రార్థనగా. ఆయన నిత్య పూజకు తోడవ్వండి.</span></p>
           <div class="rise" style="--d:160ms"><a class="btn" href="#donate"><span class="en">Donate by UPI</span><span class="te">UPI ద్వారా విరాళం</span></a></div>
           <p class="meta rise" style="--d:240ms"><span class="mantra">కార్యసిద్ధిం మే దేహి శరణాగత వత్సల | ఓం శ్రీ కార్యసిద్ధి హనుమతే నమః ||</span></p>
@@ -289,7 +333,7 @@
     <section class="gallery" id="photos">
       <header>
         <h2 class="rise"><span class="en">On site</span><span class="te">నిర్మాణ స్థలంలో</span></h2>
-        <p><span class="en">6 photographs · drag</span><span class="te">6 ఫోటోలు · జరపండి</span></p>
+        <p><span class="en">6 photographs · swipe</span><span class="te">6 ఫోటోలు · జరపండి</span></p>
       </header>
       <div class="track" id="track">
         <figure class="tall"><img src="images/hanuman-idol.webp" width="720" height="960" alt="Sree Karyasiddhi Hanuman, the idol taking form" loading="lazy" /></figure>
@@ -341,6 +385,7 @@
       </div>
       <div class="bottom">
         <p><span class="en">After you send, WhatsApp your name and payment details to <a href="https://wa.me/919912574449">+91 99125 74449</a> for your official receipt.</span><span class="te">విరాళం పంపిన తర్వాత, రసీదు కోసం మీ పేరు, వివరాలను <a href="https://wa.me/919912574449">+91 99125 74449</a>కి WhatsApp చేయండి.</span></p>
+        <a class="wa" href="https://wa.me/919912574449"><span class="en">Send receipt details on WhatsApp</span><span class="te">రసీదు కోసం WhatsApp చేయండి</span></a>
         <p>ఓం శ్రీ కార్యసిద్ధి హనుమతే నమః</p>
       </div>
     </section>
@@ -365,6 +410,8 @@
     </div>
   </footer>
 
+  <div class="dock" id="dock"><a class="btn" href="#donate"><span class="en">Donate by UPI</span><span class="te">UPI ద్వారా విరాళం</span></a></div>
+
   <script>
     document.body.classList.remove('no-js');
     // language, remembered
@@ -384,6 +431,12 @@
     const cap=document.getElementById('cap');
     const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=+e.target.dataset.photo;imgs.forEach((im,k)=>im.classList.toggle('on',k===i));cap.innerHTML='<span class="en">'+caps[i][0]+'</span><span class="te">'+caps[i][1]+'</span>'}}),{rootMargin:'-45% 0px -45% 0px'});
     document.querySelectorAll('[data-photo]').forEach(s=>so.observe(s));
+
+    // hide the floating Donate button while the donation details are on screen
+    const dock=document.getElementById('dock');
+    const zones=[document.getElementById('donate'),document.getElementById('upi')];const vis=new Set();
+    const dz=new IntersectionObserver(es=>{es.forEach(e=>e.isIntersecting?vis.add(e.target):vis.delete(e.target));dock.classList.toggle('hide',vis.size>0)},{threshold:.05});
+    zones.forEach(z=>dz.observe(z));
 
     // copy
     const out=document.getElementById('copied');
