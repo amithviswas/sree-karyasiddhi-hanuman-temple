@@ -1901,7 +1901,6 @@
   <a href="#support" class="m-donate" id="mDonate"><span>🙏</span><span class="en">Donate to the Temple</span><span class="te">ఆలయానికి విరాళం ఇవ్వండి</span></a>
 
   <audio id="chant" src="audio/ram-chant.mp3" loop preload="none" crossorigin="anonymous"></audio>
-  <button class="chant-btn" id="chantBtn" type="button" onclick="toggleChant()" aria-label="Play Ram chant" title="Ram chant">🔇</button>
 
   <!-- ===== FOOTER ===== -->
   <footer>
@@ -2073,15 +2072,13 @@
     // ===== RAM CHANT (soft background audio, 35%) =====
     var chantEl=document.getElementById('chant'),chantBtn=document.getElementById('chantBtn'),chantCtx=null,chantGain=null,chantOn=false,chantWasOn=false;
     var CHANT_VOL=0.35;
-    function chantUI(){chantBtn.textContent=chantOn?'🔊':'🔇';chantBtn.classList.toggle('playing',chantOn);chantBtn.setAttribute('aria-label',chantOn?'Mute Ram chant':'Play Ram chant')}
+    function chantUI(){if(!chantBtn)return;chantBtn.textContent=chantOn?'🔊':'🔇';chantBtn.classList.toggle('playing',chantOn);chantBtn.setAttribute('aria-label',chantOn?'Mute Ram chant':'Play Ram chant')}
     function chantSetup(){
       if(chantCtx)return;
       try{var AC=window.AudioContext||window.webkitAudioContext;chantCtx=new AC();var src=chantCtx.createMediaElementSource(chantEl);chantGain=chantCtx.createGain();chantGain.gain.value=0;src.connect(chantGain);chantGain.connect(chantCtx.destination)}catch(e){chantCtx=null;chantGain=null}
     }
     function startChant(force){
-      var off=false;try{off=localStorage.getItem('skchant')==='off'}catch(e){}
-      if(off&&!force)return;
-      chantSetup();
+            chantSetup();
       if(chantCtx&&chantCtx.state==='suspended')chantCtx.resume();
       if(chantGain){var t=chantCtx.currentTime;chantGain.gain.cancelScheduledValues(t);chantGain.gain.setValueAtTime(0,t);chantGain.gain.linearRampToValueAtTime(CHANT_VOL,t+4)}
       else{chantEl.volume=CHANT_VOL}
