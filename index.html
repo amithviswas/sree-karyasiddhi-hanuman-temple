@@ -24,6 +24,7 @@
     content="Sree Karyasiddhi Hanuman Temple under construction in Radhayapalem, Rajanagaram, East Godavari. Support daily puja and upkeep of this temple dedicated to Lord Hanuman." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@600&text=%E0%A4%B0%E0%A4%BE%E0%A4%AE&display=swap" rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Ramabhadra&family=Noto+Sans+Telugu:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
     rel="stylesheet" />
@@ -1165,7 +1166,17 @@
     /* Flower petal shower */
     .petal{position:fixed;top:-30px;z-index:9999;pointer-events:none;border-radius:60% 0 60% 0;opacity:.95;animation:petalFall linear forwards}
     @keyframes petalFall{0%{transform:translate(0,0) rotate(0)}100%{transform:translate(var(--dx),105vh) rotate(var(--rot));opacity:.7}}
-    @media (prefers-reduced-motion:reduce){.donate-btn::after,.m-donate::after,.amt-chip::after{animation:none;display:none}.petal{display:none}}
+    /* Falling Rama words */
+    .ram-word{position:fixed;top:-40px;z-index:9999;pointer-events:none;font-weight:600;line-height:1;color:#FFD166;text-shadow:0 0 6px rgba(255,159,28,.75);animation:ramFall linear forwards;white-space:nowrap}
+    .ram-word.te{font-family:'Noto Sans Telugu',sans-serif}.ram-word.hi{font-family:'Noto Sans Devanagari',sans-serif}
+    @keyframes ramFall{0%{transform:translate(0,0) rotate(var(--r0));opacity:0}10%{opacity:1}100%{transform:translate(var(--dx),108vh) rotate(var(--r1));opacity:.6}}
+    /* Chant sound toggle */
+    .chant-btn{position:fixed;left:14px;bottom:18px;z-index:1500;width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,150,26,.55);background:rgba(18,8,0,.82);color:#FFD166;font-size:1.15rem;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.45);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:transform .2s}
+    .chant-btn:hover{transform:scale(1.07)}
+    .chant-btn.playing{box-shadow:0 0 0 0 rgba(255,159,28,.5),0 4px 14px rgba(0,0,0,.45);animation:chantPulse 2.6s ease-out infinite}
+    @keyframes chantPulse{0%{box-shadow:0 0 0 0 rgba(255,159,28,.45),0 4px 14px rgba(0,0,0,.45)}100%{box-shadow:0 0 0 14px rgba(255,159,28,0),0 4px 14px rgba(0,0,0,.45)}}
+    @media (max-width:768px){.chant-btn{bottom:84px}}
+    @media (prefers-reduced-motion:reduce){.donate-btn::after,.m-donate::after,.amt-chip::after{animation:none;display:none}.petal{display:none}.ram-word{display:none}.chant-btn.playing{animation:none}}
 
     .use-head{text-align:center;font-family:'Cinzel',serif;color:var(--gold);font-size:1rem;letter-spacing:.06em;margin:-.6rem 0 .8rem}
     .use-head .te{font-family:'Ramabhadra','Noto Sans Telugu',sans-serif;letter-spacing:0}
@@ -1889,6 +1900,9 @@
 
   <a href="#support" class="m-donate" id="mDonate"><span>🙏</span><span class="en">Donate to the Temple</span><span class="te">ఆలయానికి విరాళం ఇవ్వండి</span></a>
 
+  <audio id="chant" src="audio/ram-chant.mp3" loop preload="none"></audio>
+  <button class="chant-btn" id="chantBtn" type="button" onclick="toggleChant()" aria-label="Play Ram chant" title="Ram chant">🔇</button>
+
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="f-om">🕉️</div>
@@ -1924,6 +1938,7 @@
         document.querySelectorAll('.scroll-indicator-text.te').forEach(el => el.style.display = 'block');
         document.querySelectorAll('.scroll-indicator-text.en').forEach(el => el.style.display = 'none');
       }
+      startChant(false);
       // Note: we do NOT save to localStorage here — popup shows every time on load/refresh
     }
 
@@ -2017,7 +2032,7 @@
     function petalShower(){
       if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
       var cols=['#FF9F1C','#FFB627','#F77F00','#E85D04','#FFD166','#D62828'];
-      for(var i=0;i<28;i++){
+      for(var i=0;i<20;i++){
         var p=document.createElement('span');p.className='petal';
         var sz=8+Math.random()*10;
         p.style.width=sz+'px';p.style.height=sz*1.3+'px';
@@ -2030,6 +2045,19 @@
         document.body.appendChild(p);
         setTimeout(function(el){el.remove()},(d+.8)*1000,p);
       }
+      for(var j=0;j<16;j++){
+        var w=document.createElement('span');var te=j%2===0;
+        w.className='ram-word '+(te?'te':'hi');w.textContent=te?'రామ':'राम';
+        w.style.fontSize=(12+Math.random()*6)+'px';
+        w.style.left=(3+Math.random()*90)+'vw';
+        w.style.setProperty('--dx',(Math.random()*80-40)+'px');
+        w.style.setProperty('--r0',(Math.random()*30-15)+'deg');
+        w.style.setProperty('--r1',(Math.random()*40-20)+'deg');
+        var wd=3.2+Math.random()*1.8;
+        w.style.animationDuration=wd+'s';w.style.animationDelay=(Math.random()*.9)+'s';
+        document.body.appendChild(w);
+        setTimeout(function(el){el.remove()},(wd+1)*1000,w);
+      }
     }
     function upiTap(e){
       petalShower();
@@ -2041,6 +2069,35 @@
       }
       return true;
     }
+
+    // ===== RAM CHANT (soft background audio, 35%) =====
+    var chantEl=document.getElementById('chant'),chantBtn=document.getElementById('chantBtn'),chantCtx=null,chantGain=null,chantOn=false,chantWasOn=false;
+    var CHANT_VOL=0.35;
+    function chantUI(){chantBtn.textContent=chantOn?'🔊':'🔇';chantBtn.classList.toggle('playing',chantOn);chantBtn.setAttribute('aria-label',chantOn?'Mute Ram chant':'Play Ram chant')}
+    function chantSetup(){
+      if(chantCtx)return;
+      try{var AC=window.AudioContext||window.webkitAudioContext;chantCtx=new AC();var src=chantCtx.createMediaElementSource(chantEl);chantGain=chantCtx.createGain();chantGain.gain.value=0;src.connect(chantGain);chantGain.connect(chantCtx.destination)}catch(e){chantCtx=null;chantGain=null}
+    }
+    function startChant(force){
+      var off=false;try{off=localStorage.getItem('skchant')==='off'}catch(e){}
+      if(off&&!force)return;
+      chantSetup();
+      if(chantCtx&&chantCtx.state==='suspended')chantCtx.resume();
+      if(chantGain){var t=chantCtx.currentTime;chantGain.gain.cancelScheduledValues(t);chantGain.gain.setValueAtTime(0,t);chantGain.gain.linearRampToValueAtTime(CHANT_VOL,t+4)}
+      else{chantEl.volume=CHANT_VOL}
+      var pr=chantEl.play();if(pr&&pr.catch)pr.catch(function(){chantOn=false;chantUI()});
+      chantOn=true;chantUI();try{localStorage.removeItem('skchant')}catch(e){}
+    }
+    function stopChant(){
+      if(chantGain){var t=chantCtx.currentTime;chantGain.gain.cancelScheduledValues(t);chantGain.gain.setValueAtTime(chantGain.gain.value,t);chantGain.gain.linearRampToValueAtTime(0,t+.6);setTimeout(function(){if(!chantOn)chantEl.pause()},650)}else{chantEl.pause()}
+      chantOn=false;chantUI();try{localStorage.setItem('skchant','off')}catch(e){}
+    }
+    function toggleChant(){chantOn?stopChant():startChant(true)}
+    // pause when the visitor leaves the tab, resume when they return
+    document.addEventListener('visibilitychange',function(){
+      if(document.hidden){chantWasOn=chantOn;if(chantOn){chantEl.pause()}}
+      else if(chantWasOn&&chantOn){if(chantCtx&&chantCtx.state==='suspended')chantCtx.resume();chantEl.play()}
+    });
 </script>
 </body>
 
