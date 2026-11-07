@@ -2045,7 +2045,7 @@
         document.body.appendChild(p);
         setTimeout(function(el){el.remove()},(d+.8)*1000,p);
       }
-      for(var j=0;j<16;j++){
+      for(var j=0;j<40;j++){
         var w=document.createElement('span');var te=j%2===0;
         w.className='ram-word '+(te?'te':'hi');w.textContent=te?'రామ':'राम';
         w.style.fontSize=(12+Math.random()*6)+'px';
@@ -2054,9 +2054,9 @@
         w.style.setProperty('--r0',(Math.random()*30-15)+'deg');
         w.style.setProperty('--r1',(Math.random()*40-20)+'deg');
         var wd=3.2+Math.random()*1.8;
-        w.style.animationDuration=wd+'s';w.style.animationDelay=(Math.random()*.9)+'s';
+        w.style.animationDuration=wd+'s';w.style.animationDelay=(Math.random()*1.6)+'s';
         document.body.appendChild(w);
-        setTimeout(function(el){el.remove()},(wd+1)*1000,w);
+        setTimeout(function(el){el.remove()},(wd+1.8)*1000,w);
       }
     }
     function upiTap(e){
